@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Gotham";
+    src: url("/public/fonts/Gotham-Book.otf");
+  }
+  @font-face {
+    font-family: "Gotham-Medium";
+    src: url("/public/fonts/Gotham-Medium.otf");
+  }
+  @font-face {
+    font-family: "Gotham-Medium";
+    src: url("/public/fonts/Gotham-Thin.otf");
+  }
+}
+
+@media (min-width: 429px) and (max-width: 719px) {
+  #carousel,
+  .bg-mobile-shadow-join {
+    display: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .bg-mobile {
+    background-image: url("/src/images/bg-header-mobile.png");
+    background-position: left top;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  #carousel {
+    z-index: -1;
+    position: relative;
+    float: right;
+    margin-top: -70%;
+  }
+  .bg-mobile-shadow-join {
+    top: -35%;
+    left: 0;
+  }
+  .block-card.active {
+    border: 2px solid #6f19f9;
+  }
+  .bg-logo {
+    height: 150px !important;
+  }
+  .bg-player {
+    height: 150px !important;
+  }
+}
+@media (min-width: 721px) {
+  .bg-joystick {
+    background-image: url("/src/images/bg-shadows-joystick.png"),
+      url("/src/images/bg-joystick.jpg");
+    background-size: cover, cover;
+    background-repeat: no-repeat;
+    background-position: top, center;
+  }
+  .shadow-p2e {
+    top: -400px;
+  }
+  .bg-carousel {
+    height: 1000px;
+    width: 1200px;
+    top: -350px;
+  }
+  .block-card.active {
+    border: 5px solid #6f19f9;
+  }
+}
+@media (min-width: 1536px) {
+  .shadow-p2e {
+    top: -490px;
+  }
+}
+
+body {
+  font-family: "Gotham";
+  background-color: #180042;
+  background-image: radial-gradient(
+    circle at 30% 50%,
+    #180042,
+    #0a0611 178%
+  ) !important;
+}
+
+.block-card {
+  background: linear-gradient(
+    225deg,
+    rgba(169, 239, 255, 0.1) 0%,
+    rgba(124, 0, 250, 0.1) 100%
+  );
+  mix-blend-mode: normal;
+  backdrop-filter: blur(135.914px);
+  cursor: pointer;
+  border-radius: 26px;
+}
+
+.bg-secondary {
+  background: linear-gradient(231.89deg, #12c2ea -59.57%, #7c00fa 106.57%);
+}
+.bg-contact-team {
+  background: #5487f4;
+  background-image: url("/src/images/bg-img-join-us.png"),
+    linear-gradient(249.73deg, #5487f4 2.87%, #8c54fd 89.48%);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 25%, auto, cover;
+}
+.bg-integrates {
+  background: #ff9d7e;
+  background-image: url("/src/images/bg-img-integrates.png"),
+    linear-gradient(249.73deg, #ff9d7e 2.87%, #8c54fd 89.48%);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 25%, auto, cover;
+}
+.bg-carousel-right {
+  right: 0;
+  top: -2px;
+  max-height: 320px;
+}
+.bg-logo {
+  height: 300px;
+  background-image: url("/src/images/bg-shadow-player.png"),
+    url("/src/images/logo.svg");
+  background-repeat: no-repeat;
+  background-position: left, center;
+  background-size: 90%, 40%;
+}
+.bg-player {
+  height: 300px;
+  background-image: url("/src/images/bg-shadow-player-2.png"),
+    url("/src/images/player.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
