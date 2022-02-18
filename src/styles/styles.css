@@ -70,6 +70,10 @@
   .block-card.active {
     border: 5px solid #6f19f9;
   }
+  .for-devs {
+    padding-left: 128px;
+    padding-right: 128px;
+  }
 }
 @media (min-width: 1536px) {
   .shadow-p2e {

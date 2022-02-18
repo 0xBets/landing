@@ -902,6 +902,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   .block-card.active {
     border: 5px solid #6f19f9;
   }
+
+  .for-devs {
+    padding-left: 128px !important;
+    padding-right: 128px !important;
+  }
 }
 
 @media (min-width: 1536px) {
