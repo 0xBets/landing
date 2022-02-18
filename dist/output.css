@@ -426,19 +426,19 @@ Ensure the default browser behavior of the `hidden` attribute.
 @font-face {
   font-family: "Gotham";
 
-  src: url("/public/fonts/Gotham-Book.otf");
+  src: url("../public/fonts/Gotham-Book.otf");
 }
 
 @font-face {
   font-family: "Gotham-Medium";
 
-  src: url("/public/fonts/Gotham-Medium.otf");
+  src: url("../public/fonts/Gotham-Medium.otf");
 }
 
 @font-face {
   font-family: "Gotham-Medium";
 
-  src: url("/public/fonts/Gotham-Thin.otf");
+  src: url("../public/fonts/Gotham-Thin.otf");
 }
 
 *, ::before, ::after {
@@ -775,7 +775,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .pb-12 {
-  padding-bottom: 3rem;
+  padding-bottom: 4rem;
 }
 
 .pb-8 {
@@ -842,7 +842,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 @media (max-width: 720px) {
   .bg-mobile {
-    background-image: url("/src/images/bg-header-mobile.png");
+    background-image: url("../src/images/bg-header-mobile.png");
     background-position: left top;
     background-size: contain;
     background-repeat: no-repeat;
@@ -875,8 +875,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 @media (min-width: 721px) {
   .bg-joystick {
-    background-image: url("/src/images/bg-shadows-joystick.png"),
-      url("/src/images/bg-joystick.jpg");
+    background-image: url("../src/images/bg-shadows-joystick.png"),
+      url("../src/images/bg-joystick.jpg");
     background-size: cover, cover;
     background-repeat: no-repeat;
     background-position: top, center;
@@ -932,7 +932,7 @@ body {
 
 .bg-contact-team {
   background: #5487f4;
-  background-image: url("/src/images/bg-img-join-us.png"),
+  background-image: url("../src/images/bg-img-join-us.png"),
     linear-gradient(249.73deg, #5487f4 2.87%, #8c54fd 89.48%);
   background-repeat: no-repeat;
   background-position: bottom right;
@@ -941,7 +941,7 @@ body {
 
 .bg-integrates {
   background: #ff9d7e;
-  background-image: url("/src/images/bg-img-integrates.png"),
+  background-image: url("../src/images/bg-img-integrates.png"),
     linear-gradient(249.73deg, #ff9d7e 2.87%, #8c54fd 89.48%);
   background-repeat: no-repeat;
   background-position: right center;
@@ -956,8 +956,8 @@ body {
 
 .bg-logo {
   height: 300px;
-  background-image: url("/src/images/bg-shadow-player.png"),
-    url("/src/images/logo.svg");
+  background-image: url("../src/images/bg-shadow-player.png"),
+    url("../src/images/logo.svg");
   background-repeat: no-repeat;
   background-position: left, center;
   background-size: 90%, 40%;
@@ -965,8 +965,8 @@ body {
 
 .bg-player {
   height: 300px;
-  background-image: url("/src/images/bg-shadow-player-2.png"),
-    url("/src/images/player.png");
+  background-image: url("../src/images/bg-shadow-player-2.png"),
+    url("../src/images/player.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
@@ -990,8 +990,8 @@ body {
   }
 
   .sm\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
+    font-size: 2.7rem;
+    line-height: 1.2;
   }
 }
 
