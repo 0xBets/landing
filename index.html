@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>Blast | Play. Compete. Earn</title>
-    <link rel="icon" href="./images/icons/favicon.ico" />
+    <link rel="icon" href="./src/images/icons/favicon.ico" />
     <meta
       property="keywords"
       content="games, bets, challenges, tournament, e-sports"
@@ -15,7 +15,7 @@
         e-sports games and win prizes."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="./images/metaimage-blast.png" />
+    <meta property="og:image" content="./src/images/metaimage-blast.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="viewport"
@@ -29,7 +29,7 @@
       content="A gaming platform for skill-based challenges & tournaments, improve your skills playing 
         e-sports games and win prizes."
     />
-    <meta name="twitter:image" content="./images/metaimage-blast.png" />
+    <meta name="twitter:image" content="./src/images/metaimage-blast.png" />
     <link href="../dist/output.css" rel="stylesheet" />
     <link
       rel="stylesheet"
@@ -42,39 +42,44 @@
       <nav class="flex mx-8 py-9 md:px-12">
         <div class="w-1/2 md:w-3/6 my-auto">
           <a href="./">
-            <img src="./images/logo.svg" />
+            <img src="./src/images/logo.svg" />
           </a>
         </div>
         <div class="w-1/2 md:w-3/6">
           <div class="flex float-right">
-            <a href="https://blast.gg" class="hidden my-auto mr-12 lg:block text-white"
+            <a
+              href="https://blast.gg"
+              class="hidden my-auto mr-12 lg:block text-white"
               >Home</a
             >
-            <a href="https://medium.com/@blast.gg" target="_blank" class="hidden my-auto mr-12 lg:block text-white"
+            <a
+              href="https://medium.com/@blast.gg"
+              target="_blank"
+              class="hidden my-auto mr-12 lg:block text-white"
               >Blog</a
             >
             <!--<a href="#" class="hidden my-auto mr-5 md:block"
-              ><img class="h-4" src="./images/icons/icon-telegramm.svg"
+              ><img class="h-4" src="./src/images/icons/icon-telegramm.svg"
             /></a>-->
             <a
               class="hidden mr-5 my-auto md:block"
               href="https://twitter.com/BlastGMI"
               target="_blank"
-              ><img class="h-4" src="./images/icons/icon-twitter.svg"
+              ><img class="h-4" src="./src/images/icons/icon-twitter.svg"
             /></a>
             <a
               class="hidden mr-12 my-auto md:block"
               href="https://discord.com/invite/3ZyJTT5tjt"
               target="_blank"
-              ><img class="h-4" src="./images/icons/icon-discord.svg"
+              ><img class="h-4" src="./src/images/icons/icon-discord.svg"
             /></a>
-            
+
             <a href="https://discord.com/invite/3ZyJTT5tjt" target="_blank">
-            <button
-              class="my-auto bg-white text-primary py-1.5 px-7 rounded-primary"
-            >
-              Launch App
-            </button>
+              <button
+                class="my-auto bg-white text-primary py-1.5 px-7 rounded-primary"
+              >
+                Launch App
+              </button>
             </a>
           </div>
         </div>
@@ -88,7 +93,11 @@
       </div>
     </section>
     <div class="hidden md:block relative shadow-p2e">
-      <img class="absolute z-0" src="./images/bg-shadow-play-2-earn.png" style="width:100%;"/>
+      <img
+        class="absolute z-0"
+        src="./src/images/bg-shadow-play-2-earn.png"
+        style="width: 100%"
+      />
     </div>
     <section class="grid grid-cols-1 mb-24 md:grid-cols-2 md:mb-36">
       <div class="relative order-last md:static md:order-first my-auto z-10">
@@ -105,21 +114,21 @@
       <div class="relative order-first md:order-last">
         <img
           class="w-10/12 mx-auto md:self-center md:w-12/12"
-          src="./images/bg-play-2earn.png"
+          src="./src/images/bg-play-2earn.png"
         />
       </div>
     </section>
     <section class="grid grid-cols-1 md:grid-cols-2 mb-36">
       <div class="order-last md:order-first relative">
-        <img class="absolute" src="./images/bg-shadow-hiw.png" />
+        <img class="absolute" src="./src/images/bg-shadow-hiw.png" />
         <img
           class="hidden absolute z-10 h-24 -mt-16 ml-12 lg:mt-16 lg:h-32 lg:ml-32 2xl:mt-0 2xl:h-32 2xl:ml-48 coin"
-          src="./images/coin.svg"
+          src="./src/images/coin.svg"
         />
-        <img class="w-8/12 mx-auto" src="./images/howitworks.png" />
+        <img class="w-8/12 mx-auto" src="./src/images/howitworks.png" />
         <img
           class="hidden absolute h-14 ml-10 -mt-8 lg:h-20 lg:ml-24 lg:-mt-14 2xl:-mt-8 2xl:ml-48 gaming-accounts"
-          src="./images/gaming-accounts.png"
+          src="./src/images/gaming-accounts.png"
         />
       </div>
       <div
@@ -154,177 +163,223 @@
     </section>
     <section class="relative mb-40 grid grid-cols-1 md:grid-cols-2 md:mb-36">
       <img
-        src="./images/bg-mobile-shadow-join.png"
+        src="./src/images/bg-mobile-shadow-join.png"
         class="bg-mobile-shadow-join absolute sm:hidden"
       />
       <div class="relative md:static z-20 mx-8 md:mx-0 md:pl-12 text-white">
-        <h3 class="text-4xl pb-8 md:text-5xl md:pb-14 text-5xl mt-28 mx-8 md:text-6xl md:w-8/12 md:pl-12 md:mt-0 ">Join our Beta</h3>
-        <p class="text-2xl md:text-3xl mb-14 pr-12 text-5xl mt-28 mx-8 md:text-6xl md:w-8/12 md:pl-12 md:mt-0">
+        <h3
+          class="text-4xl pb-8 md:text-5xl md:pb-14 text-5xl mt-28 mx-8 md:text-6xl md:w-8/12 md:pl-12 md:mt-0"
+        >
+          Join our Beta
+        </h3>
+        <p
+          class="text-2xl md:text-3xl mb-14 pr-12 text-5xl mt-28 mx-8 md:text-6xl md:w-8/12 md:pl-12 md:mt-0"
+        >
           and compete for incredible prizes every week
         </p>
         <a href="https://discord.com/invite/3ZyJTT5tjt" target="_blank">
-          <button class="rounded-primary bg-secondary py-3.5 px-7 w-40" style="margin-left:75px;">
-          Join
-        </button></a>
+          <button
+            class="rounded-primary bg-secondary py-3.5 px-7 w-40"
+            style="margin-left: 75px"
+          >
+            Join
+          </button></a
+        >
       </div>
       <img
         class="hidden md:block absolute z-10 bg-carousel"
-        src="./images/bg-shadow-carousel.png"
+        src="./src/images/bg-shadow-carousel.png"
       />
       <div id="carousel" class="sm:hidden md:block">
         <!-- <div id="carousel" class="w-10/12 lg:w-7/12 sm:hidden md:block"> -->
         <div class="responsive">
           <div>
-            <img class="h-24 md:h-20 mb-4 md:mb-8" src="./images/item-1.png" />
+            <img
+              class="h-24 md:h-20 mb-4 md:mb-8"
+              src="./src/images/item-1.png"
+            />
           </div>
 
           <div>
-            <img class="h-24 md:h-20 mb-4 md:mb-8" src="./images/item-2.png" />
+            <img
+              class="h-24 md:h-20 mb-4 md:mb-8"
+              src="./src/images/item-2.png"
+            />
           </div>
           <div>
-            <img class="h-24 md:h-20 mb-4 md:mb-8" src="./images/item-3.png" />
+            <img
+              class="h-24 md:h-20 mb-4 md:mb-8"
+              src="./src/images/item-3.png"
+            />
           </div>
           <div>
-            <img class="h-24 md:h-20 mb-4 md:mb-8" src="./images/item-4.png" />
+            <img
+              class="h-24 md:h-20 mb-4 md:mb-8"
+              src="./src/images/item-4.png"
+            />
           </div>
           <div>
-            <img class="h-24 md:h-20 mb-4 md:mb-8" src="./images/item-5.png" />
+            <img
+              class="h-24 md:h-20 mb-4 md:mb-8"
+              src="./src/images/item-5.png"
+            />
           </div>
           <div>
-            <img class="h-24 md:h-20 mb-4 md:mb-8" src="./images/item-6.png" />
+            <img
+              class="h-24 md:h-20 mb-4 md:mb-8"
+              src="./src/images/item-6.png"
+            />
           </div>
           <div>
-            <img class="h-24 md:h-20 mb-4 md:mb-8" src="./images/item-7.png" />
+            <img
+              class="h-24 md:h-20 mb-4 md:mb-8"
+              src="./src/images/item-7.png"
+            />
           </div>
           <div>
-            <img class="h-24 md:h-20 mb-4 md:mb-8" src="./images/item-8.png" />
+            <img
+              class="h-24 md:h-20 mb-4 md:mb-8"
+              src="./src/images/item-8.png"
+            />
           </div>
           <div>
-            <img class="h-24 md:h-20 mb-4 md:mb-8" src="./images/item-9.png" />
+            <img
+              class="h-24 md:h-20 mb-4 md:mb-8"
+              src="./src/images/item-9.png"
+            />
           </div>
           <div>
-            <img class="h-24 md:h-20 mb-4 md:mb-8" src="./images/item-1.png" />
+            <img
+              class="h-24 md:h-20 mb-4 md:mb-8"
+              src="./src/images/item-1.png"
+            />
           </div>
 
           <div>
-            <img class="h-24 md:h-20 mb-4 md:mb-8" src="./images/item-2.png" />
-          </div>
-          <div>
-            <img class="h-24 md:h-20 mb-4 md:mb-8" src="./images/item-3.png" />
+            <img
+              class="h-24 md:h-20 mb-4 md:mb-8"
+              src="./src/images/item-2.png"
+            />
           </div>
           <div>
             <img
-              class="hidden 2xl:block h-24 md:h-20 mb-4 md:mb-8"
-              src="./images/item-4.png"
+              class="h-24 md:h-20 mb-4 md:mb-8"
+              src="./src/images/item-3.png"
             />
           </div>
           <div>
             <img
               class="hidden 2xl:block h-24 md:h-20 mb-4 md:mb-8"
-              src="./images/item-5.png"
+              src="./src/images/item-4.png"
             />
           </div>
           <div>
             <img
               class="hidden 2xl:block h-24 md:h-20 mb-4 md:mb-8"
-              src="./images/item-6.png"
+              src="./src/images/item-5.png"
             />
           </div>
           <div>
             <img
               class="hidden 2xl:block h-24 md:h-20 mb-4 md:mb-8"
-              src="./images/item-7.png"
+              src="./src/images/item-6.png"
             />
           </div>
           <div>
             <img
               class="hidden 2xl:block h-24 md:h-20 mb-4 md:mb-8"
-              src="./images/item-2.png"
+              src="./src/images/item-7.png"
             />
           </div>
           <div>
             <img
               class="hidden 2xl:block h-24 md:h-20 mb-4 md:mb-8"
-              src="./images/item-1.png"
+              src="./src/images/item-2.png"
+            />
+          </div>
+          <div>
+            <img
+              class="hidden 2xl:block h-24 md:h-20 mb-4 md:mb-8"
+              src="./src/images/item-1.png"
             />
           </div>
           <div>
             <img
               class="hidden 2xl:hidden h-24 md:h-20 mb-4 md:mb-8"
-              src="./images/item-3.png"
+              src="./src/images/item-3.png"
             />
           </div>
           <div>
             <img
               class="hidden 2xl:block h-24 md:h-20 mb-4 md:mb-8"
-              src="./images/item-9.png"
+              src="./src/images/item-9.png"
             />
           </div>
           <div>
             <img
               class="hidden md:block h-24 md:h-20 mb-4 md:mb-8"
-              src="./images/item-8.png"
+              src="./src/images/item-8.png"
             />
           </div>
           <div>
             <img
               class="hidden md:block h-24 md:h-20 mb-4 md:mb-8"
-              src="./images/item-6.png"
+              src="./src/images/item-6.png"
             />
           </div>
           <div>
             <img
               class="hidden md:block h-24 md:h-20 mb-4 md:mb-8"
-              src="./images/item-7.png"
+              src="./src/images/item-7.png"
             />
           </div>
           <div>
             <img
               class="hidden md:block h-24 md:h-20 mb-4 md:mb-8"
-              src="./images/item-8.png"
+              src="./src/images/item-8.png"
             />
           </div>
           <div>
             <img
               class="hidden md:block h-24 md:h-20 mb-4 md:mb-8"
-              src="./images/item-3.png"
+              src="./src/images/item-3.png"
             />
           </div>
           <div>
             <img
               class="hidden md:block h-24 md:h-20 mb-4 md:mb-8"
-              src="./images/item-1.png"
+              src="./src/images/item-1.png"
             />
           </div>
           <div>
             <img
               class="hidden md:block h-24 md:h-20 mb-4 md:mb-8"
-              src="./images/item-2.png"
+              src="./src/images/item-2.png"
             />
           </div>
           <div>
             <img
               class="hidden md:block h-24 md:h-20 mb-4 md:mb-8"
-              src="./images/item-4.png"
+              src="./src/images/item-4.png"
             />
           </div>
           <div>
             <img
               class="hidden md:block h-24 md:h-20 mb-4 md:mb-8"
-              src="./images/item-5.png"
+              src="./src/images/item-5.png"
             />
           </div>
           <div>
             <img
               class="hidden md:block h-24 md:h-20 mb-4 md:mb-8"
-              src="./images/item-7.png"
+              src="./src/images/item-7.png"
             />
           </div>
         </div>
       </div>
       <img
         class="hidden md:block absolute z-10 bg-carousel-right"
-        src="./images/bg-shadow-right-carousel.png"
+        src="./src/images/bg-shadow-right-carousel.png"
       />
     </section>
     <section class="text-white mb-24 md:mb-36 px-8 md:px-12 mx-8">
@@ -336,11 +391,12 @@
             experience for your users.
           </p>
           <a href="https://discord.com/invite/3ZyJTT5tjt" target="_blank">
-          <button
-            class="rounded-primary bg-white text-primary py-1.5 px-4 md:px-7"
+            <button
+              class="rounded-primary bg-white text-primary py-1.5 px-4 md:px-7"
+            >
+              Contact the team
+            </button></a
           >
-            Contact the team
-          </button></a>
         </div>
         <div class="bg-integrates rounded-xl py-5 px-7 md:py-10 md:px-9">
           <p class="pr-12 md:pr-40 2xl:pr-80 text-base md:text-xl">
@@ -358,27 +414,27 @@
         <div class="grid grid-cols-2 md:grid-cols-4 gap-y-4">
           <img
             class="h-16 md:h-20 my-auto mx-auto"
-            src="./images/sanctor.png"
+            src="./src/images/sanctor.png"
           />
-          <img class="h-9 md:h-11 my-auto mx-auto" src="./images/fbg.png" />
+          <img class="h-9 md:h-11 my-auto mx-auto" src="./src/images/fbg.png" />
           <img
             class="h-24 md:h-36 my-auto mx-auto"
-            src="./images/GBV-logo.png"
+            src="./src/images/GBV-logo.png"
           />
           <img
             class="h-16 md:h-24 my-auto mx-auto"
-            src="./images/protocol-labs.png"
+            src="./src/images/protocol-labs.png"
           />
         </div>
         <div class="grid grid-cols-2 md:grid-cols-3 gap-y-4">
           <img
             class="h-9 md:h-14 my-auto mx-auto"
-            src="./images/consensys.png"
+            src="./src/images/consensys.png"
           />
-          <img class="h-9 md:h-11 my-auto mx-auto" src="./images/gcr.png" />
+          <img class="h-9 md:h-11 my-auto mx-auto" src="./src/images/gcr.png" />
           <img
             class="h-11 md:h-20 my-auto mx-auto"
-            src="./images/Umbrella-Network-Logo.png"
+            src="./src/images/Umbrella-Network-Logo.png"
           />
         </div>
       </div>
@@ -392,22 +448,19 @@
     <section class="grid grid-cols-2 mx-8 py-10 bottom-0">
       <div class="flex">
         <!--<a href="#" class="mr-8"
-          ><img class="h-4" src="./images/icons/icon-telegramm.svg"
+          ><img class="h-4" src="./src/images/icons/icon-telegramm.svg"
         /></a>-->
         <a href="https://twitter.com/BlastGMI" class="mr-8" target="_blank"
-          ><img class="h-4" src="./images/icons/icon-twitter.svg"
+          ><img class="h-4" src="./src/images/icons/icon-twitter.svg"
         /></a>
         <a
           href="https://discord.com/invite/3ZyJTT5tjt"
           class="mr-8"
           target="_blank"
-          ><img class="h-4" src="./images/icons/icon-discord.svg"
+          ><img class="h-4" src="./src/images/icons/icon-discord.svg"
         /></a>
-        <a
-          href="https://medium.com/@blast.gg"
-          class="mr-8"
-          target="_blank"
-          ><img class="h-4" src="./images/icons/icon-seek.svg"
+        <a href="https://medium.com/@blast.gg" class="mr-8" target="_blank"
+          ><img class="h-4" src="./src/images/icons/icon-seek.svg"
         /></a>
       </div>
       <div class="float-right">
@@ -427,6 +480,6 @@
       type="text/javascript"
       src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
-    <script type="text/javascript" src="./main.js"></script>
+    <script type="text/javascript" src="./src/main.js"></script>
   </body>
 </html>
