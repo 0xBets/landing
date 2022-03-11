@@ -36,8 +36,32 @@
       type="text/css"
       href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-NNL82WP");
+    </script>
+    <!-- End Google Tag Manager -->
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-NNL82WP"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <section class="relative bg-mobile bg-joystick md:h-screen">
       <nav class="flex mx-8 py-9 md:px-12">
         <div class="w-1/2 md:w-3/6 my-auto">
@@ -87,6 +111,27 @@
           </div>
         </div>
       </nav>
+      <img
+        src="./src/images/coin5.png"
+        class="rellax coin5"
+        data-rellax-speed="4"
+      />
+      <img
+        src="./src/images/coin3.png"
+        class="rellax coin3"
+        data-rellax-speed="3"
+      />
+      <img
+        src="./src/images/coin4.png"
+        class="rellax coin4"
+        data-rellax-speed="2"
+      />
+      <img
+        src="./src/images/coin1.png"
+        class="rellax coin1"
+        data-rellax-speed="5"
+      />
+
       <div class="md:absolute md:bottom-0 z-10">
         <h1
           class="text-white text-5xl mt-28 mx-8 md:text-6xl md:w-7/12 md:pl-12 md:mt-0 pb-12"
@@ -97,12 +142,11 @@
     </section>
     <div class="hidden md:block relative shadow-p2e">
       <img
-        class="absolute z-0"
+        class="absolute z-0 bg-play2earn"
         src="./src/images/bg-shadow-play-2-earn.png"
-        style="width: 100%"
       />
     </div>
-    <section class="grid grid-cols-1 mb-24 md:grid-cols-2 md:mb-36">
+    <section class="grid grid-cols-1 mb-24 md:grid-cols-2 md:mb-36 relative">
       <div class="relative order-last md:static md:order-first my-auto z-10">
         <img
           class="absolute w-full -mt-60 z-0 sm:hidden"
@@ -116,8 +160,23 @@
       </div>
       <div class="relative order-first md:order-last">
         <img
-          class="w-10/12 mx-auto md:self-center md:w-12/12"
+          class="w-10/12 mx-auto md:m-0 md:w-12/12 img-play-2earn"
           src="./src/images/bg-play-2earn.png"
+        />
+        <img
+          src="./src/images/coin6.png"
+          class="rellax coin6"
+          data-rellax-speed="-2"
+        />
+        <img
+          src="./src/images/coin7.png"
+          class="rellax coin7"
+          data-rellax-speed="-2"
+        />
+        <img
+          src="./src/images/coin8.png"
+          class="rellax coin8"
+          data-rellax-speed="-2"
         />
       </div>
     </section>
@@ -137,7 +196,7 @@
       <div
         class="mx-8 order-first md:order-last lg:mx-auto self-center lg:pr-40 text-white"
       >
-        <h3 class="text-4xl pb-12 md:text-5xl md:pb-14">How it works</h3>
+        <h3 class="title text-4xl pb-12 md:text-5xl md:pb-14">How it works</h3>
         <div
           id="first-block"
           class="py-5 px-7 md:px-16 md:py-10 block-card active mb-10"
@@ -416,7 +475,7 @@
         Our Partners
       </h3>
       <div class="opacity-70">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-y-4">
+        <div class="grid grid-cols-2 md:grid-cols-4 row-logos">
           <img
             class="h-16 md:h-20 my-auto mx-auto"
             src="./src/images/sanctor.png"
@@ -431,7 +490,7 @@
             src="./src/images/protocol-labs.png"
           />
         </div>
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-y-4">
+        <div class="grid grid-cols-2 md:grid-cols-3 row-logos">
           <img
             class="h-9 md:h-14 my-auto mx-auto"
             src="./src/images/consensys.png"
@@ -486,5 +545,14 @@
       src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
     <script type="text/javascript" src="./src/main.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.js"
+      integrity="sha512-qk0XupXlge1h9I63+bC7K8850xgWnUjTgSNkfLnsqc7dWdx4031UbKjKs2cuRxsNXymkSjyzSCiryVouU74zkg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      let rellax = new Rellax(".rellax");
+    </script>
   </body>
 </html>
