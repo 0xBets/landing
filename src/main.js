@@ -2,10 +2,9 @@ $(".block-card").on("click", function () {
   $(this).addClass("active");
   $(this).children("p:first-child").removeClass("opacity-20");
   if (this.id == "second-block") {
-    console.log("sss");
-    $(".coin").removeClass("hidden");
+    $(".coin").fadeIn(500);
   } else if (this.id == "third-block") {
-    $(".gaming-accounts").removeClass("hidden");
+    $(".gaming-accounts").fadeIn(1000);
   }
 });
 

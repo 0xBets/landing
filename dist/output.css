@@ -841,7 +841,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 429px) and (max-width: 719px) {
-  #carousel,
+  .carousel,
   .bg-mobile-shadow-join {
     display: none;
   }
@@ -859,7 +859,8 @@ Ensure the default browser behavior of the `hidden` attribute.
     z-index: -1;
     position: relative;
     float: right;
-    margin-top: -70%;
+    display: none;
+    /* margin-top: -70%; */
   }
 
   .bg-mobile-shadow-join {
@@ -878,13 +879,32 @@ Ensure the default browser behavior of the `hidden` attribute.
   .bg-player {
     height: 150px !important;
   }
+  .coin1,
+  .coin3,
+  .coin4,
+  .coin5,
+  .coin6,
+  .coin7,
+  .coin8 {
+    display: none !important;
+  }
+  .row-logos > img {
+    margin-bottom: 50px;
+  }
+  .title {
+    z-index: 3;
+  }
+  .bg-integrates,
+  .bg-contact-team {
+    background-size: 30%, auto, cover !important;
+  }
 }
 
 @media (min-width: 721px) {
   .bg-joystick {
     background-image: url("../src/images/bg-shadows-joystick.png"),
       url("../src/images/bg-joystick.jpg");
-    background-size: cover, cover;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: top, center;
   }
@@ -907,6 +927,52 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding-left: 128px !important;
     padding-right: 128px !important;
   }
+  .coin1 {
+    height: 200px;
+    margin-top: 200px;
+    margin-left: 140px;
+  }
+  .coin3 {
+    position: absolute;
+    bottom: 200px;
+    right: 10%;
+  }
+  .coin4 {
+    height: 200px;
+    position: absolute;
+    bottom: 15%;
+    right: 33%;
+  }
+  .coin5 {
+    position: absolute;
+    right: 20%;
+    top: 30%;
+    height: 100px;
+  }
+  .coin6 {
+    position: absolute;
+    z-index: 2;
+    height: 136.54px;
+    top: 40%;
+  }
+  .coin7 {
+    position: absolute;
+    z-index: 2;
+    height: 136.54px;
+    top: 0%;
+  }
+  .coin8 {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 35%;
+  }
+  .bg-play2earn {
+    width: 100%;
+  }
+  .row-logos {
+    margin-bottom: 50px;
+  }
 }
 
 @media (min-width: 1536px) {
@@ -915,6 +981,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 }
 
+.img-play-2earn {
+  margin-right: 0px;
+}
 body {
   font-family: "Gotham";
   background-color: #180042;
@@ -948,7 +1017,7 @@ body {
     linear-gradient(249.73deg, #5487f4 2.87%, #8c54fd 89.48%);
   background-repeat: no-repeat;
   background-position: bottom right;
-  background-size: 25%, auto, cover;
+  background-size: 40%, auto, cover;
 }
 
 .bg-integrates {
@@ -956,8 +1025,8 @@ body {
   background-image: url("../src/images/bg-img-integrates.png"),
     linear-gradient(249.73deg, #ff9d7e 2.87%, #8c54fd 89.48%);
   background-repeat: no-repeat;
-  background-position: right center;
-  background-size: 25%, auto, cover;
+  background-position: right bottom;
+  background-size: 40%, auto, cover;
 }
 
 .bg-carousel-right {
