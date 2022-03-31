@@ -36,13 +36,19 @@
       type="text/css"
       href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TK9C7019D2"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-TK9C7019D2"
+    ></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-TK9C7019D2');
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-TK9C7019D2");
     </script>
     <!-- Google Tag Manager -->
     <script>
@@ -140,31 +146,30 @@
         data-rellax-speed="5"
       />
 
-      <div class="md:absolute md:bottom-0 z-10">
-        <h1
-          class="text-white text-5xl mt-28 mx-8 md:text-6xl md:w-7/12 md:pl-12 md:mt-0 pb-12"
-        >
-          Earn playing the games you love
-        </h1>
+      <div class="md:absolute md:bottom-0 z-10 main-title text-5xl">
+        Earn playing the games you love
       </div>
     </section>
+
     <div class="hidden md:block relative shadow-p2e">
       <img
         class="absolute z-0 bg-play2earn"
         src="./src/images/bg-shadow-play-2-earn.png"
       />
     </div>
-    <section class="grid grid-cols-1 mb-24 md:grid-cols-2 md:mb-36 relative">
+    <section
+      class="play-2-earn grid grid-cols-1 mb-24 md:grid-cols-2 md:mb-36 relative"
+    >
       <div class="relative order-last md:static md:order-first my-auto z-10">
         <img
           class="absolute w-full -mt-60 z-0 sm:hidden"
           src="../src/images/bg-mobile-play-2earn.svg"
         />
-        <h2
-          class="absolute text-white mx-8 text-2xl z-20 -mt-28 sm:static sm:pl-12 sm:text-5xl sm:mt-0 self-center"
+        <div
+          class="second-title absolute text-white mx-8 text-2xl z-20 -mt-28 sm:static sm:pl-12 sm:text-5xl sm:mt-0 self-center"
         >
           Play2Earn, Tournaments and Challenges for every game
-        </h2>
+        </div>
       </div>
       <div class="relative order-first md:order-last">
         <img
@@ -188,18 +193,25 @@
         />
       </div>
     </section>
-    <section class="grid grid-cols-1 md:grid-cols-2 mb-36">
-      <div class="order-last md:order-first relative">
+
+    <section id="hiw" class="grid grid-cols-1 md:grid-cols-2 mb-36">
+      <div class="order-last md:order-first relative my-auto">
         <img class="absolute" src="./src/images/bg-shadow-hiw.png" />
         <img
-          class="hidden absolute z-10 h-24 -mt-16 ml-12 lg:mt-16 lg:h-32 lg:ml-32 2xl:mt-0 2xl:h-32 2xl:ml-48 coin"
-          src="./src/images/coin.svg"
+          class="absolute z-10 coin9 rellax"
+          src="./src/images/coin9.svg"
+          data-rellax-speed="-2"
         />
-        <img class="w-8/12 mx-auto" src="./src/images/howitworks.png" />
         <img
-          class="hidden absolute h-14 ml-10 -mt-8 lg:h-20 lg:ml-24 lg:-mt-14 2xl:-mt-8 2xl:ml-48 gaming-accounts"
-          src="./src/images/gaming-accounts.png"
+          class="absolute z-10 h-24 ml-12 lg:h-32 lg:ml-32 2xl:mt-0 2xl:h-32 2xl:ml-48 coin rellax"
+          src="./src/images/coin.svg"
+          data-rellax-speed="-2"
         />
+        <img
+          class="w-8/12 mx-auto howitworksImg"
+          src="./src/images/howitworks.png"
+        />
+        <img class="console" src="./src/images/logos-console.svg" />
       </div>
       <div
         class="mx-8 order-first md:order-last lg:mx-auto self-center lg:pr-40 text-white"
@@ -207,7 +219,7 @@
         <h3 class="title text-4xl pb-12 md:text-5xl md:pb-14">How it works</h3>
         <div
           id="first-block"
-          class="py-5 px-7 md:px-16 md:py-10 block-card active mb-10"
+          class="py-5 px-7 md:px-16 md:py-10 block-card mb-10"
         >
           <p class="text-2xl md:text-3xl block-p">
             Launch the app and connect your wallet
@@ -217,7 +229,7 @@
           id="second-block"
           class="py-5 px-7 md:px-16 md:py-10 block-card mb-10"
         >
-          <p class="text-2xl md:text-3xl opacity-20 block-p">
+          <p class="text-2xl md:text-3xl block-p">
             Link your gaming accounts and join a tournament
           </p>
         </div>
@@ -225,7 +237,7 @@
           id="third-block"
           class="py-5 px-7 md:px-16 md:py-10 block-card mb-10 lg:relative lg:z-50"
         >
-          <p class="text-2xl md:text-3xl opacity-20 block-p">
+          <p class="text-2xl md:text-3xl block-p">
             Earn and win prizes as you play
           </p>
         </div>
@@ -478,7 +490,7 @@
         </div>
       </div>
     </section>
-    <section class="mb-24 md:mb-36 container mx-auto">
+    <section class="mb-24 md:mb-36 container mx-auto partners">
       <h3 class="text-4xl px-8 md:text-5xl pb-14 text-white md:text-center">
         Our Partners
       </h3>
@@ -514,9 +526,14 @@
     <section>
       <div class="grid grid-cols-2">
         <div class="bg-logo"></div>
-        <div class="bg-player"></div>
+        <div id="parallax" class="player" role="banner">
+          <div id="parallax-wrap">
+            <div class="parallax-layer bg4"></div>
+          </div>
+        </div>
       </div>
     </section>
+
     <section class="grid grid-cols-2 mx-8 py-10 bottom-0">
       <div class="flex">
         <!--<a href="#" class="mr-8"

@@ -870,33 +870,58 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .block-card.active {
     border: 2px solid #6f19f9;
+    opacity: 1;
   }
 
   .bg-logo {
+    wid
     height: 150px !important;
   }
 
-  .bg-player {
-    height: 150px !important;
-  }
+  .coin,
   .coin1,
   .coin3,
   .coin4,
   .coin5,
   .coin6,
   .coin7,
-  .coin8 {
+  .coin8,
+  .coin9 {
     display: none !important;
   }
   .row-logos > img {
     margin-bottom: 50px;
   }
   .title {
-    z-index: 3;
+    position:absolute;
+    z-index: 10;
+  }
+  #first-block{
+    margin-top:100px;
   }
   .bg-integrates,
   .bg-contact-team {
     background-size: 30%, auto, cover !important;
+  }
+  .console {
+    height: 50px;
+    position: absolute;
+    margin-top: -30px;
+    left: 50px;
+  }
+  #parallax .bg4 {
+    background-position: center !important;
+  }
+  .main-title {
+    margin-top:112px !important;
+    font-size: 48px !important;
+    width:100% !important;
+    padding:0px 30px !important;
+    margin-left:0px !important;
+    line-height:48px !important;
+  }
+  .partners{
+    margin-bottom:0px !important;
   }
 }
 
@@ -921,11 +946,19 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .block-card.active {
     border: 5px solid #6f19f9;
+    opacity: 1;
   }
 
   .for-devs {
     padding-left: 128px !important;
     padding-right: 128px !important;
+  }
+  .coin {
+    margin-top: -420px !important;
+  }
+  .coin9 {
+    margin-top: -420px !important;
+    margin-left: 400px;
   }
   .coin1 {
     height: 200px;
@@ -973,14 +1006,57 @@ Ensure the default browser behavior of the `hidden` attribute.
   .row-logos {
     margin-bottom: 50px;
   }
+  .console {
+    position: absolute;
+    margin-top: -30px;
+    left: 100px;
+  }
+  #parallax .bg4 {
+    background-position:bottom;
+  }
 }
 
 @media (min-width: 1536px) {
   .shadow-p2e {
     top: -490px;
   }
+  .console {
+    position: absolute;
+    margin-top: -30px;
+    left: 100px;
+  }
 }
-
+@media (min-width: 1700px) {
+  .bg-contact-team,
+  .bg-integrates {
+    background-size: 30%, auto, cover !important;
+    padding: 60px !important;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 20%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+.main-title {
+  color: white;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 60px;
+  line-height: 70px;
+  width: 40%;
+  margin-left: 59px;
+  margin-bottom: 50px;
+  animation: fadeIn 1s ease-in both;
+}
+.second-title {
+  animation: fadeIn 1s ease-in both;
+}
 .img-play-2earn {
   margin-right: 0px;
 }
@@ -1003,8 +1079,9 @@ body {
   mix-blend-mode: normal;
   -webkit-backdrop-filter: blur(135.914px);
   backdrop-filter: blur(135.914px);
-  cursor: pointer;
   border-radius: 26px;
+  border: 5px solid transparent;
+  opacity: 0.2;
 }
 
 .bg-secondary {
@@ -1044,13 +1121,8 @@ body {
   background-size: 90%, 40%;
 }
 
-.bg-player {
-  height: 300px;
-  background-image: url("../src/images/bg-shadow-player-2.png"),
-    url("../src/images/player.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
+.howitworksImg {
+  margin-top: 80px;
 }
 
 @media (min-width: 640px) {
@@ -1315,4 +1387,38 @@ body {
   .\32xl\:pr-80 {
     padding-right: 20rem;
   }
+}
+
+#parallax {
+  overflow: hidden;
+  position: relative;
+
+}
+#parallax-wrap {
+  height: 100%;
+  width: 100%;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.parallax-layer {
+  position: absolute;
+}
+
+#parallax .bg4 {
+  height: 100%;
+  width: 100%;
+  background: url("../src/images/player.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-transform: translateZ(250px);
+  -webkit-transition: all 0.2s;
+  transform: translateZ(250px);
+  transition: all 0.2s;
+}
+
+.player{
+  background:url("../src/images/bg-shadow-player-2.png");
+  background-position:right;
+  background-repeat:no-repeat;
+  background-size:50%;
 }
