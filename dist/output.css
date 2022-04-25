@@ -923,6 +923,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   .partners{
     margin-bottom:0px !important;
   }
+  .icons{
+    margin:auto;
+  }
+  .links-xs{
+    display:block;
+    margin-top:40px;
+  }
+  .links-md{
+    display:none;
+  }
+  .terms{
+    margin-top:40px;
+    text-align:center;
+  }
 }
 
 @media (min-width: 721px) {
@@ -1013,6 +1027,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
   #parallax .bg4 {
     background-position:bottom;
+  }
+  .links-md{
+    display:block;
+  }
+  .links-xs{
+    display:none;
   }
 }
 
@@ -1505,4 +1525,16 @@ color: rgba(255, 255, 255, 1);
 .terms-conditions-section .section-container .heading-paragraphs ul li span a {
   color: rgba(190,126,255);
   text-decoration: underline;
+}
+
+.opacity-40{
+  opacity:0.4;
+}
+
+.pr-4{
+  padding-right:40px;
+}
+
+.pr-7{
+  padding-right:70px;
 }
