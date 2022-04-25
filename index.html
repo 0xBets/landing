@@ -15,7 +15,10 @@
         e-sports games and win prizes."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="./src/images/metaimage-blast.png" />
+    <meta
+      property="og:image"
+      content="https://blast.gg/src/images/metaimage-blast.png"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="viewport"
@@ -29,7 +32,10 @@
       content="A gaming platform for skill-based challenges & tournaments, improve your skills playing 
         e-sports games and win prizes."
     />
-    <meta name="twitter:image" content="./src/images/metaimage-blast.png" />
+    <meta
+      name="twitter:image"
+      content="https://blast.gg/src/images/metaimage-blast.png"
+    />
     <link href="../dist/output.css" rel="stylesheet" />
     <link
       rel="stylesheet"
@@ -534,12 +540,16 @@
       </div>
     </section>
 
-    <section class="grid grid-cols-2 mx-8 py-10 bottom-0">
-      <div class="flex">
+    <section class="grid grid-cols-1 md:grid-cols-2 mx-8 py-10 bottom-0">
+      <div class="flex icons">
         <!--<a href="#" class="mr-8"
           ><img class="h-4" src="./src/images/icons/icon-telegramm.svg"
         /></a>-->
-        <a href="https://twitter.com/BlastGMI" class="mr-8" target="_blank"
+        <a
+          href="https://twitter.com/BlastGMI"
+          class="mr-8"
+          target="_blank"
+          class="flex"
           ><img class="h-4" src="./src/images/icons/icon-twitter.svg"
         /></a>
         <a
@@ -548,12 +558,37 @@
           target="_blank"
           ><img class="h-4" src="./src/images/icons/icon-discord.svg"
         /></a>
-        <a href="https://medium.com/@blast.gg" class="mr-8" target="_blank"
+        <a href="https://medium.com/@blast.gg" target="_blank"
           ><img class="h-4" src="./src/images/icons/icon-seek.svg"
         /></a>
       </div>
-      <div class="float-right">
-        <p class="text-white float-right text-xs opacity-70">blast © 2022</p>
+      <div class="links-xs mx-auto">
+        <a
+          href="https://blast.gg/terms"
+          target="_blank"
+          class="text-white text-xs opacity-70 pr-7"
+          >Terms & Conditions</a
+        >
+        <a href="mailto:hi@blast.gg" class="text-white text-xs opacity-70"
+          >hi@blast.gg</a
+        >
+        <p class="terms text-white text-xs opacity-40">blast © 2022</p>
+      </div>
+      <div class="links-md float-right">
+        <p class="terms text-white float-right text-xs opacity-40">
+          blast © 2022
+        </p>
+        <a
+          href="mailto:hi@blast.gg"
+          class="text-white float-right text-xs opacity-70 pr-4"
+          >hi@blast.gg</a
+        >
+        <a
+          href="https://blast.gg/terms"
+          target="_blank"
+          class="text-white float-right text-xs opacity-70 pr-4"
+          >Terms & Conditions</a
+        >
       </div>
     </section>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
