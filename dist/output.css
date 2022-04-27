@@ -874,7 +874,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 
   .bg-logo {
-    wid
     height: 150px !important;
   }
 
@@ -1444,6 +1443,53 @@ body {
 }
 
 /* terms and condition page */
+
+@media only screen and (max-width:1440px) {
+  .section-container {
+    margin: 0 200px !important;
+  }
+}
+
+@media only screen and (max-width:1024px) {
+  .section-container {
+    margin: 0 100px !important;
+  }
+}
+
+@media only screen and (max-width:768px) {
+  .section-container {
+    margin: 0 50px !important;
+  }
+  .user-agree {
+    font-size: 25px !important;
+  }
+  .terms-condition {
+    font-size: 25px !important;
+  }
+}
+
+@media only screen and (max-width:640px) {
+  .footer-links-container {flex-direction: column;}
+  .footer-container {
+    align-items: flex-start !important;
+  }
+  .footer-link {
+    margin-right: 0 !important;
+    margin-top: 10px;
+    order: 2;
+  }
+}
+
+.footer-container {
+  margin-top: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-links-container {display: flex;}
+.footer-icons-container {display: flex;}
+.footer-link {margin-right: 30px;}
 
 .user-agreement-container {
   display: flex;
