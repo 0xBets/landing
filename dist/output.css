@@ -841,6 +841,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 429px) and (max-width: 719px) {
+
   .carousel,
   .bg-mobile-shadow-join {
     display: none;
@@ -874,7 +875,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 
   .bg-logo {
-    wid
     height: 150px !important;
   }
 
@@ -889,53 +889,65 @@ Ensure the default browser behavior of the `hidden` attribute.
   .coin9 {
     display: none !important;
   }
-  .row-logos > img {
+
+  .row-logos>img {
     margin-bottom: 50px;
   }
+
   .title {
-    position:absolute;
+    position: absolute;
     z-index: 10;
   }
-  #first-block{
-    margin-top:100px;
+
+  #first-block {
+    margin-top: 100px;
   }
+
   .bg-integrates,
   .bg-contact-team {
     background-size: 30%, auto, cover !important;
   }
+
   .console {
     height: 50px;
     position: absolute;
     margin-top: -30px;
     left: 50px;
   }
+
   #parallax .bg4 {
     background-position: center !important;
   }
+
   .main-title {
-    margin-top:112px !important;
+    margin-top: 112px !important;
     font-size: 48px !important;
-    width:100% !important;
-    padding:0px 30px !important;
-    margin-left:0px !important;
-    line-height:48px !important;
+    width: 100% !important;
+    padding: 0px 30px !important;
+    margin-left: 0px !important;
+    line-height: 48px !important;
   }
-  .partners{
-    margin-bottom:0px !important;
+
+  .partners {
+    margin-bottom: 0px !important;
   }
-  .icons{
-    margin:auto;
+
+  .icons {
+    margin: auto;
   }
-  .links-xs{
-    display:block;
-    margin-top:40px;
+
+  .links-xs {
+    display: block;
+    margin-top: 40px;
   }
-  .links-md{
-    display:none;
+
+  .links-md {
+    display: none;
   }
-  .terms{
-    margin-top:40px;
-    text-align:center;
+
+  .terms {
+    margin-top: 40px;
+    text-align: center;
   }
 }
 
@@ -967,72 +979,87 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding-left: 128px !important;
     padding-right: 128px !important;
   }
+
   .coin {
     margin-top: -420px !important;
   }
+
   .coin9 {
     margin-top: -420px !important;
     margin-left: 400px;
   }
+
   .coin1 {
     height: 200px;
     margin-top: 200px;
     margin-left: 140px;
   }
+
   .coin3 {
     position: absolute;
     bottom: 200px;
     right: 10%;
   }
+
   .coin4 {
     height: 200px;
     position: absolute;
     bottom: 15%;
     right: 33%;
   }
+
   .coin5 {
     position: absolute;
     right: 20%;
     top: 30%;
     height: 100px;
   }
+
   .coin6 {
     position: absolute;
     z-index: 2;
     height: 136.54px;
     top: 40%;
   }
+
   .coin7 {
     position: absolute;
     z-index: 2;
     height: 136.54px;
     top: 0%;
   }
+
   .coin8 {
     position: absolute;
     z-index: 2;
     top: 50%;
     left: 35%;
   }
+
   .bg-play2earn {
     width: 100%;
   }
+
   .row-logos {
     margin-bottom: 50px;
   }
+
   .console {
     position: absolute;
     margin-top: -30px;
     left: 100px;
   }
+
   #parallax .bg4 {
-    background-position:bottom;
+    background-position: bottom;
   }
-  .links-md{
-    display:block;
+
+  .links-md {
+    display: block;
   }
-  .links-xs{
-    display:none;
+
+  .links-xs {
+    display: none;
   }
 }
 
@@ -1040,29 +1067,35 @@ Ensure the default browser behavior of the `hidden` attribute.
   .shadow-p2e {
     top: -490px;
   }
+
   .console {
     position: absolute;
     margin-top: -30px;
     left: 100px;
   }
 }
+
 @media (min-width: 1700px) {
+
   .bg-contact-team,
   .bg-integrates {
     background-size: 30%, auto, cover !important;
     padding: 60px !important;
   }
 }
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
     transform: translate3d(0, 20%, 0);
   }
+
   100% {
     opacity: 1;
     transform: translate3d(0, 0, 0);
   }
 }
+
 .main-title {
   color: white;
   font-style: normal;
@@ -1074,28 +1107,27 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 50px;
   animation: fadeIn 1s ease-in both;
 }
+
 .second-title {
   animation: fadeIn 1s ease-in both;
 }
+
 .img-play-2earn {
   margin-right: 0px;
 }
+
 body {
   font-family: "Gotham";
   background-color: #180042;
-  background-image: radial-gradient(
-    circle at 30% 50%,
-    #180042,
-    #0a0611 178%
-  ) !important;
+  background-image: radial-gradient(circle at 30% 50%,
+      #180042,
+      #0a0611 178%) !important;
 }
 
 .block-card {
-  background: linear-gradient(
-    225deg,
-    rgba(169, 239, 255, 0.1) 0%,
-    rgba(124, 0, 250, 0.1) 100%
-  );
+  background: linear-gradient(225deg,
+      rgba(169, 239, 255, 0.1) 0%,
+      rgba(124, 0, 250, 0.1) 100%);
   mix-blend-mode: normal;
   -webkit-backdrop-filter: blur(135.914px);
   backdrop-filter: blur(135.914px);
@@ -1412,14 +1444,15 @@ body {
 #parallax {
   overflow: hidden;
   position: relative;
-
 }
+
 #parallax-wrap {
   height: 100%;
   width: 100%;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
+
 .parallax-layer {
   position: absolute;
 }
@@ -1436,14 +1469,22 @@ body {
   transition: all 0.2s;
 }
 
-.player{
-  background:url("../src/images/bg-shadow-player-2.png");
-  background-position:right;
-  background-repeat:no-repeat;
-  background-size:50%;
+.player {
+  background: url("../src/images/bg-shadow-player-2.png");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 50%;
 }
 
 /* terms and condition page */
+
+.bg {
+  background-image: url("/assets/svg/starts-bg.svg");
+  min-height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 .user-agreement-container {
   display: flex;
@@ -1461,10 +1502,11 @@ body {
   margin-top: 150px;
 }
 
-.user-agree , .terms-condition {
+.user-agree,
+.terms-condition {
   font-family: Gotham;
-font-weight: 500;
-color: rgba(255, 255, 255, 1);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
 }
 
 .user-agreement-container .user-agree {
@@ -1479,20 +1521,20 @@ color: rgba(255, 255, 255, 1);
 .privacy-policy {
   font-family: Gotham;
   font-size: 30px;
-  font-weight: 400;  
+  font-weight: 400;
   color: rgba(255, 255, 255, 1);
 }
 
-.terms-conditions-section { 
-  margin-top: 73px  
-} 
+.terms-conditions-section {
+  margin-top: 73px;
+}
 
 .section-container {
   margin: 0 300px;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  text-align: left; 
+  text-align: left;
 }
 
 .terms-conditions-section .section-container :nth-child(1) {
@@ -1500,7 +1542,7 @@ color: rgba(255, 255, 255, 1);
   color: rgba(255, 255, 255, 1);
 }
 
-.terms-conditions-section .section-container .section-headings { 
+.terms-conditions-section .section-container .section-headings {
   font-weight: 400;
   color: rgba(255, 255, 255, 1);
   margin: 30px 0 20px 0;
@@ -1523,18 +1565,709 @@ color: rgba(255, 255, 255, 1);
 }
 
 .terms-conditions-section .section-container .heading-paragraphs ul li span a {
-  color: rgba(190,126,255);
+  color: rgba(190, 126, 255);
   text-decoration: underline;
 }
 
-.opacity-40{
-  opacity:0.4;
+.opacity-40 {
+  opacity: 0.4;
 }
 
-.pr-4{
-  padding-right:40px;
+.pr-4 {
+  padding-right: 40px;
 }
 
-.pr-7{
-  padding-right:70px;
+.pr-7 {
+  padding-right: 70px;
 }
+
+/* launch */
+
+@media only screen and (max-width: 1150px) {
+
+  .cross {
+    top: 180px !important;
+    left: 873px !important;
+  }
+
+  .april-29 {
+    width: 280px !important;
+  }
+
+  .launch-date {
+    width: 330px !important;
+  }
+
+  .countdown {
+    width: 830px !important;
+  }
+
+  .number1 {
+    margin: 0 0 0 0;
+    width: 50px !important;
+    height: 70px !important;
+  }
+
+  .number2 {
+    width: 50px !important;
+    height: 70px !important;
+    margin: 0 0 0 5px;
+  }
+
+  .number3 {
+    width: 50px !important;
+    height: 70px !important;
+    margin: 0 0 0 25px;
+  }
+
+  .number4 {
+    width: 50px !important;
+    height: 70px !important;
+    margin: 0 0 0 5px;
+  }
+
+  .number5 {
+    width: 50px !important;
+    height: 70px !important;
+    margin: 0 0 0 25px;
+  }
+
+  .number6 {
+    width: 50px !important;
+    height: 70px !important;
+    margin: 0 0 0 5px;
+  }
+
+  .number7 {
+    width: 50px !important;
+    height: 70px !important;
+    margin: 0 0 0 25px;
+  }
+
+  .number8 {
+    width: 50px !important;
+    height: 70px !important;
+    margin: 0 0 0 5px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .cross {
+    top: 100px !important;
+    left: 60% !important;
+  }
+
+  .arrow {
+    left: 31% !important;
+    top: 230px !important;
+  }
+
+  .footer-container {
+    padding-top: 75px !important;
+  }
+
+  .player-img {
+    position: relative !important;
+    display: none;
+  }
+
+  .countdown-container {
+    display: flex;
+    justify-content: center;
+    margin: 0 50px;
+  }
+
+  .countdown {
+    padding-left: 0 !important;
+    position: initial !important;
+    height: 140px !important;
+  }
+
+  .launch-date {
+    left: 50%;
+    position: initial !important;
+    display: block !important;
+    margin: 0 auto 0 auto !important;
+    padding: 150px 0 50px 0 !important;
+    width: 300px !important;
+  }
+
+  .april-29 {
+    left: 50% !important;
+    position: initial !important;
+    display: block !important;
+    margin: 0 auto 40px auto !important;
+    width: 250px !important;
+  }
+
+  .number1 {
+    margin: 0 0 0 0;
+    width: 50px !important;
+    height: 70px !important;
+  }
+
+  .number2 {
+    width: 50px !important;
+    height: 70px !important;
+    margin: 0 0 0 5px;
+  }
+
+  .number3 {
+    width: 50px !important;
+    height: 70px !important;
+    margin: 0 0 0 25px;
+  }
+
+  .number4 {
+    width: 50px !important;
+    height: 70px !important;
+    margin: 0 0 0 5px;
+  }
+
+  .number5 {
+    width: 50px !important;
+    height: 70px !important;
+    margin: 0 0 0 25px;
+  }
+
+  .number6 {
+    width: 50px !important;
+    height: 70px !important;
+    margin: 0 0 0 5px;
+  }
+
+  .number7 {
+    width: 50px !important;
+    height: 70px !important;
+    margin: 0 0 0 25px;
+  }
+
+  .number8 {
+    width: 50px !important;
+    height: 70px !important;
+    margin: 0 0 0 5px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+  .lines {
+    top: 70px !important;
+  }
+
+  .arrow {
+    left: 22% !important;
+    top: 300px !important;
+  }
+
+  .launch-section {
+    padding: 50px 0 50px 0 !important;
+  }
+
+  .counter-day,
+  .counter-hour,
+  .counter-min,
+  .counter-sec {
+    font-size: 12px !important;
+  }
+
+  .countdown {
+    height: 140px !important;
+  }
+
+  .number1 {
+    font-size: 30px !important;
+    width: 40px !important;
+    height: 70px !important;
+  }
+
+  .number2 {
+    font-size: 30px !important;
+    width: 40px !important;
+    height: 70px !important;
+    margin: 0 0 0 5px;
+  }
+
+  .number3 {
+    font-size: 30px !important;
+    width: 40px !important;
+    height: 70px !important;
+    margin: 0 0 0 25px;
+  }
+
+  .number4 {
+    font-size: 30px !important;
+    width: 40px !important;
+    height: 70px !important;
+    margin: 0 0 0 5px;
+  }
+
+  .number5 {
+    font-size: 30px !important;
+    width: 40px !important;
+    height: 70px !important;
+    margin: 0 0 0 25px;
+  }
+
+  .number6 {
+    font-size: 30px !important;
+    width: 40px !important;
+    height: 70px !important;
+    margin: 0 0 0 5px;
+  }
+
+  .number7 {
+    font-size: 30px !important;
+    width: 40px !important;
+    height: 70px !important;
+    margin: 0 0 0 25px;
+  }
+
+  .number8 {
+    font-size: 30px !important;
+    width: 40px !important;
+    height: 70px !important;
+    margin: 0 0 0 5px;
+  }
+}
+
+@media only screen and (max-width: 524px) {
+
+  .countdown {
+    height: 110px !important;
+  }
+
+  .footer {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    flex-direction: column-reverse;
+  }
+
+  .footer div p {
+    padding-bottom: 100px;
+  }
+
+  .footer div .logo-img {
+    margin-left: 20px !important;
+  }
+
+  .number1 {
+    font-size: 30px !important;
+    width: 35px !important;
+    height: 50px !important;
+  }
+
+  .number2 {
+    font-size: 30px !important;
+    width: 35px !important;
+    height: 50px !important;
+    margin: 0 0 0 5px;
+  }
+
+  .number3 {
+    font-size: 30px !important;
+    width: 35px !important;
+    height: 50px !important;
+    margin: 0 0 0 25px;
+  }
+
+  .number4 {
+    font-size: 30px !important;
+    width: 35px !important;
+    height: 50px !important;
+    margin: 0 0 0 5px;
+  }
+
+  .number5 {
+    font-size: 30px !important;
+    width: 35px !important;
+    height: 50px !important;
+    margin: 0 0 0 25px;
+  }
+
+  .number6 {
+    font-size: 30px !important;
+    width: 35px !important;
+    height: 50px !important;
+    margin: 0 0 0 5px;
+  }
+
+  .number7 {
+    font-size: 30px !important;
+    width: 35px !important;
+    height: 50px !important;
+    margin: 0 0 0 25px;
+  }
+
+  .number8 {
+    font-size: 30px !important;
+    width: 35px !important;
+    height: 50px !important;
+    margin: 0 0 0 5px;
+  }
+
+}
+
+@media only screen and (max-width: 425px) {
+
+  .arrow {
+    width: 25px;
+    left: 8% !important;
+    top: 300px !important;
+  }
+
+  .cross {
+    width: 25px;
+    top: 140px !important;
+    left: 65% !important;
+  }
+
+  .countdown-container {
+    margin: 0 20px;
+  }
+
+  .number1 {
+    font-size: 30px !important;
+    width: 30px !important;
+    height: 50px !important;
+  }
+
+  .number2 {
+    font-size: 30px !important;
+    width: 30px !important;
+    height: 50px !important;
+    margin: 0 0 0 5px;
+  }
+
+  .number3 {
+    font-size: 30px !important;
+    width: 30px !important;
+    height: 50px !important;
+    margin: 0 0 0 25px;
+  }
+
+  .number4 {
+    font-size: 30px !important;
+    width: 30px !important;
+    height: 50px !important;
+    margin: 0 0 0 5px;
+  }
+
+  .number5 {
+    font-size: 30px !important;
+    width: 30px !important;
+    height: 50px !important;
+    margin: 0 0 0 25px;
+  }
+
+  .number6 {
+    font-size: 30px !important;
+    width: 30px !important;
+    height: 50px !important;
+    margin: 0 0 0 5px;
+  }
+
+  .number7 {
+    font-size: 30px !important;
+    width: 30px !important;
+    height: 50px !important;
+    margin: 0 0 0 25px;
+  }
+
+  .number8 {
+    font-size: 30px !important;
+    width: 30px !important;
+    height: 50px !important;
+    margin: 0 0 0 5px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+
+  .number1 {
+    font-size: 30px !important;
+    width: 25px !important;
+    height: 50px !important;
+  }
+
+  .number2 {
+    font-size: 30px !important;
+    width: 25px !important;
+    height: 50px !important;
+    margin: 0 0 0 5px;
+  }
+
+  .number3 {
+    font-size: 30px !important;
+    width: 25px !important;
+    height: 50px !important;
+    margin: 0 0 0 25px;
+  }
+
+  .number4 {
+    font-size: 30px !important;
+    width: 25px !important;
+    height: 50px !important;
+    margin: 0 0 0 5px;
+  }
+
+  .number5 {
+    font-size: 30px !important;
+    width: 25px !important;
+    height: 50px !important;
+    margin: 0 0 0 25px;
+  }
+
+  .number6 {
+    font-size: 30px !important;
+    width: 25px !important;
+    height: 50px !important;
+    margin: 0 0 0 5px;
+  }
+
+  .number7 {
+    font-size: 30px !important;
+    width: 25px !important;
+    height: 50px !important;
+    margin: 0 0 0 25px;
+  }
+
+  .number8 {
+    font-size: 30px !important;
+    width: 25px !important;
+    height: 50px !important;
+    margin: 0 0 0 5px;
+  }
+}
+
+.counter-day,
+.counter-hour,
+.counter-min,
+.counter-sec {
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.counter-hour,
+.counter-min,
+.counter-sec {
+  margin-left: 25px;
+}
+
+.footer-container {
+  padding-top: 800px;
+}
+
+.footer {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 25px;
+}
+
+.footer div .logo-img {
+  margin-right: 20px;
+}
+
+.main-wrapper {
+  position: absolute;
+  width: 100%;
+  background: radial-gradient(99.17% 99.17% at 30.48% 50%,
+      #180042 0%,
+      #0a0611 100%);
+  min-height: 100vh;
+}
+
+.logo,
+.player-img,
+.launch-date,
+.april-29,
+.arrow,
+.cross {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.lines {
+  position: absolute;
+  top: 100px;
+  right: 0;
+}
+
+.logo {
+  top: 20px;
+  left: 20px;
+}
+
+.player-img {
+  width: 400px;
+  top: 250px;
+  left: -80px;
+  z-index: 1000;
+}
+
+.launch-date {
+  width: 350px;
+  left: 350px;
+  top: 200px;
+}
+
+.april-29 {
+  width: 450px;
+  left: 690px;
+  top: 310px;
+}
+
+.arrow {
+  left: 300px;
+  top: 290px;
+}
+
+.cross {
+  left: 1000px;
+  top: 180px;
+}
+
+.countdown {
+  padding-left: 200px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1000px;
+  height: 196px;
+  left: 147px;
+  top: 481px;
+  background: linear-gradient(270deg, #c0289d 0%, #302862 100%);
+  border-radius: 11px;
+}
+
+.number1 {
+  height: 95px;
+  width: 65px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: white;
+}
+
+.number2 {
+  margin: 0 0 0 5px;
+  height: 95px;
+  width: 65px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: white;
+}
+
+.number3 {
+  margin: 0 0 0 25px;
+  height: 95px;
+  width: 65px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: white;
+}
+
+.number4 {
+  margin: 0 0 0 5px;
+  height: 95px;
+  width: 65px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: white;
+}
+
+.number5 {
+  margin: 0 0 0 25px;
+  height: 95px;
+  width: 65px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: white;
+}
+
+.number6 {
+  margin: 0 0 0 5px;
+  height: 95px;
+  width: 65px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: white;
+}
+
+.number7 {
+  margin: 0 0 0 25px;
+  height: 95px;
+  width: 65px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: white;
+}
+
+.number8 {
+  margin: 0 0 0 5px;
+  height: 95px;
+  width: 65px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: white;
+}
+
+/* counter 2 */
+
+/* .move {
+  animation: move ease-in-out 1s infinite;
+}
+
+@keyframes move {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-25vh);
+  }
+} */
