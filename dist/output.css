@@ -2138,6 +2138,10 @@ body {
   min-height: 100vh;
 }
 
+.launch-footer {
+  padding-top: 800px;
+}
+
 .logo,
 .player-img,
 .launch-date,

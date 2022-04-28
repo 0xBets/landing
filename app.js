@@ -11,9 +11,8 @@ let displaySec = 0;
 
 function stopWatch() {
 
-    const launchDate = moment('04/29/2022 08:00 PM').utc();
-    const currDate = moment().utc();
-
+    const launchDate = moment(new Date(1651262400 * 1000));
+    const currDate = moment();
     const diff = moment.duration(launchDate.diff(currDate));
     const { _data } = diff;
 
