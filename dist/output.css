@@ -2110,8 +2110,12 @@ body {
   margin-left: 25px;
 }
 
+
 .footer-container {
-  padding-top: 800px;
+  padding-top: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .footer {
