@@ -35,32 +35,36 @@ $(document).on("ready", function () {
     ],
   });
 });
-window.addEventListener("scroll", function () {
-  var top = $(window).scrollTop();
+let scrollCount = 0;
 
-  if ($("#hiw").offset().top < top + 150) {
-    $("#first-block").addClass("active");
+window.addEventListener("mousewheel", outserScrollFunc, { passive: false }
+);
+
+function outserScrollFunc(e) {
+  console.log("scrolling...")
+  var target = document.querySelector('#second-block');
+  var bounding = target.getBoundingClientRect();
+
+  if (
+    bounding.top >= 0 &&
+    bounding.left >= 0 &&
+    bounding.right <= (window.innerWidth || document.documentElement.clientWidth) &&
+    bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  ) {
+     if(!$("#first-block").hasClass("active") || !$("#second-block").hasClass("active") || !$("#third-block").hasClass("active")) e.preventDefault();
+     document.addEventListener("mousewheel", scrollFunc, { passive: false })
+
   } else {
-    $("#first-block").removeClass("active");
+    document.removeEventListener("mousewheel", scrollFunc)
+
   }
-  if ($("#hiw").offset().top < top + 50) {
-    $("#second-block").addClass("active");
-    $(".console").fadeIn("500");
-  } else {
-    $("#second-block").removeClass("active");
-    $(".console").fadeOut("500");
-  }
-  if ($("#hiw").offset().top < top - 50) {
-    $("#third-block").addClass("active");
-  } else {
-    $("#third-block").removeClass("active");
-  }
+
   if ($(".play-2-earn").offset().top < top + 100) {
     $(".second-title").show();
   }
   $(".second-title");
-});
 
+}
 var parallax = {
   options: {
     multiplier: 0.002,
@@ -135,3 +139,50 @@ var parallax = {
     this.mousemoveEvent();
   },
 };
+
+function scrollFunc(e) {
+
+  if(e.deltaY < 0) return;
+  
+  let isMouse = Math.abs(e.deltaY / 100) >= 1;
+  let returnNum = num => {
+    return isMouse ? num : num * 10;
+  }
+  if (!$("#third-block").hasClass("active")) {
+    e.preventDefault()
+  }
+
+  scrollCount++;
+  if (scrollCount >= returnNum(3)) {
+    $("#first-block").addClass("active");
+  } else {
+    $("#first-block").removeClass("active");
+
+  }
+  if (scrollCount >= returnNum(6)) {
+    $("#second-block").addClass("active");
+  } else {
+    $("#second-block").removeClass("active");
+
+  }
+  if (scrollCount >= returnNum(9)) {
+    $("#third-block").addClass("active");
+  } else {
+    $("#third-block").removeClass("active");
+
+  }
+
+}
+
+// function throttle(callback, limit) {
+//   var wait = false;
+//   return function (...args) {
+//     if (!wait) {
+//       callback(...args);
+//       wait = true;
+//       setTimeout(function () {
+//         wait = false;
+//       }, limit);
+//     }
+//   }
+// }
