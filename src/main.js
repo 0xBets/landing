@@ -51,8 +51,12 @@ function outserScrollFunc(e) {
     bounding.right <= (window.innerWidth || document.documentElement.clientWidth) &&
     bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight)
   ) {
-     if(!$("#first-block").hasClass("active") || !$("#second-block").hasClass("active") || !$("#third-block").hasClass("active")) e.preventDefault();
-     document.addEventListener("mousewheel", scrollFunc, { passive: false })
+    if ((e.deltaY > 0 && (!$("#first-block").hasClass("active") || !$("#second-block").hasClass("active") || !$("#third-block").hasClass("active"))) ||
+      (e.deltaY < 0 && ($("#first-block").hasClass("active") || $("#second-block").hasClass("active") || $("#third-block").hasClass("active")))
+    ) {
+      e.preventDefault();
+    }
+    document.addEventListener("mousewheel", scrollFunc, { passive: false })
 
   } else {
     document.removeEventListener("mousewheel", scrollFunc)
@@ -142,17 +146,22 @@ var parallax = {
 
 function scrollFunc(e) {
 
-  if(e.deltaY < 0) return;
-  
+  // if(e.deltaY < 0) return;
+
   let isMouse = Math.abs(e.deltaY / 100) >= 1;
   let returnNum = num => {
     return isMouse ? num : num * 10;
   }
-  if (!$("#third-block").hasClass("active")) {
+  if ((e.deltaY > 0 && !$("#third-block").hasClass("active") || (e.deltaY < 0 && $("#third-block").hasClass("active")))) {
     e.preventDefault()
   }
 
-  scrollCount++;
+  if (e.deltaY > 0) {
+
+    scrollCount++;
+  } else {
+    scrollCount--;
+  }
   if (scrollCount >= returnNum(3)) {
     $("#first-block").addClass("active");
   } else {
