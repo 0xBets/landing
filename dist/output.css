@@ -56,6 +56,14 @@ section {
   scroll-snap-align: center;
 }
 
+.hide {
+  visibility: hidden;
+}
+
+.show {
+  visibility: visible;
+}
+
 /*
 1. Remove the margin in all browsers.
 2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
@@ -503,6 +511,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .container {
   width: 100%;
+}
+
+.console {
+  display: block !important;
 }
 
 @media (min-width: 640px) {
