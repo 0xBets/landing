@@ -37,33 +37,40 @@ $(document).on("ready", function () {
 });
 let scrollCount = 0;
 
-window.addEventListener("mousewheel", outserScrollFunc, { passive: false }
-);
+window.addEventListener("mousewheel", outerScrollFunc, { passive: false });
 
-function outserScrollFunc(e) {
-  console.log("scrolling...")
-  var target = document.querySelector('#second-block');
+function outerScrollFunc(e) {
+  var target = document.querySelector("#second-block");
   var bounding = target.getBoundingClientRect();
 
   if (
     bounding.top >= 0 &&
     bounding.left >= 0 &&
-    bounding.right <= (window.innerWidth || document.documentElement.clientWidth) &&
-    bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+    bounding.right <=
+    (window.innerWidth || document.documentElement.clientWidth) &&
+    bounding.bottom <=
+    (window.innerHeight || document.documentElement.clientHeight)
   ) {
-     if(!$("#first-block").hasClass("active") || !$("#second-block").hasClass("active") || !$("#third-block").hasClass("active")) e.preventDefault();
-     document.addEventListener("mousewheel", scrollFunc, { passive: false })
-
+    if (
+      (e.deltaY > 0 &&
+        (!$("#first-block").hasClass("active") ||
+          !$("#second-block").hasClass("active") ||
+          !$("#third-block").hasClass("active"))) ||
+      (e.deltaY < 0 &&
+        ($("#first-block").hasClass("active") ||
+          $("#second-block").hasClass("active") ||
+          $("#third-block").hasClass("active")))
+    )
+      e.preventDefault();
+    document.addEventListener("mousewheel", scrollFunc, { passive: false });
   } else {
-    document.removeEventListener("mousewheel", scrollFunc)
-
+    document.removeEventListener("mousewheel", scrollFunc);
   }
 
   if ($(".play-2-earn").offset().top < top + 100) {
     $(".second-title").show();
   }
   $(".second-title");
-
 }
 var parallax = {
   options: {
@@ -141,48 +148,66 @@ var parallax = {
 };
 
 function scrollFunc(e) {
+  // if(e.deltaY < 0) return;
 
-  if(e.deltaY < 0) return;
-  
+
+  let metamaskWalletImg = document.querySelector(".howitworksImg");
+  let consoleImg = document.querySelector(".consoleImg");
+  let trophyImg = document.querySelector(".trophy");
+
   let isMouse = Math.abs(e.deltaY / 100) >= 1;
-  let returnNum = num => {
+  let returnNum = (num) => {
     return isMouse ? num : num * 10;
-  }
-  if (!$("#third-block").hasClass("active")) {
-    e.preventDefault()
+  };
+
+  if (
+    (e.deltaY > 0 && !$("#third-block").hasClass("active")) ||
+    (e.deltaY < 0 && $("#first-block").hasClass("active"))
+  ) {
+    e.preventDefault();
   }
 
-  scrollCount++;
+  if (e.deltaY < 0) {
+    scrollCount--;
+  } else if (e.deltaY > 0) {
+    scrollCount++;
+  }
   if (scrollCount >= returnNum(3)) {
     $("#first-block").addClass("active");
+    metamaskWalletImg.classList.add("show")
   } else {
     $("#first-block").removeClass("active");
+    metamaskWalletImg.classList.remove("show")
 
   }
   if (scrollCount >= returnNum(6)) {
     $("#second-block").addClass("active");
+    consoleImg.classList.add("show")
+
   } else {
     $("#second-block").removeClass("active");
+    consoleImg.classList.remove("show")
 
   }
   if (scrollCount >= returnNum(9)) {
     $("#third-block").addClass("active");
+    trophyImg.classList.add("show")
+
   } else {
     $("#third-block").removeClass("active");
-
+    trophyImg.classList.remove("show")
   }
-
 }
 
-// function throttle(callback, limit) {
-//   var wait = false;
-//   return function (...args) {
-//     if (!wait) {
-//       callback(...args);
-//       wait = true;
-//       setTimeout(function () {
-//         wait = false;
-//       }, limit);
-//     }
-//   }
-// }
+function throttle(callback, limit) {
+  var wait = false;
+  return function (...args) {
+    if (!wait) {
+      callback(...args);
+      wait = true;
+      setTimeout(function () {
+        wait = false;
+      }, limit);
+    }
+  };
+}

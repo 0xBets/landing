@@ -46,6 +46,22 @@ html {
     "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 4 */
+
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  scroll-snap-align: center;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.show {
+  visibility: visible;
 }
 
 /*
@@ -497,6 +513,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 100%;
 }
 
+.console {
+  display: block !important;
+}
+
 @media (min-width: 640px) {
   .container {
     max-width: 640px;
@@ -841,6 +861,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 429px) and (max-width: 719px) {
+
   .carousel,
   .bg-mobile-shadow-join {
     display: none;
@@ -888,53 +909,66 @@ Ensure the default browser behavior of the `hidden` attribute.
   .coin9 {
     display: none !important;
   }
-  .row-logos > img {
+
+  .row-logos>img {
     margin-bottom: 50px;
   }
+
   .title {
-    position:absolute;
+    position: absolute;
     z-index: 10;
+    margin-top: 650px;
   }
-  #first-block{
-    margin-top:100px;
+
+  #first-block {
+    margin-top: 720px;
   }
+
   .bg-integrates,
   .bg-contact-team {
     background-size: 30%, auto, cover !important;
   }
+
   .console {
     height: 50px;
     position: absolute;
     margin-top: -30px;
     left: 50px;
   }
+
   #parallax .bg4 {
     background-position: center !important;
   }
+
   .main-title {
-    margin-top:112px !important;
+    margin-top: 112px !important;
     font-size: 48px !important;
-    width:100% !important;
-    padding:0px 30px !important;
-    margin-left:0px !important;
-    line-height:48px !important;
+    width: 100% !important;
+    padding: 0px 30px !important;
+    margin-left: 0px !important;
+    line-height: 48px !important;
   }
-  .partners{
-    margin-bottom:0px !important;
+
+  .partners {
+    margin-bottom: 0px !important;
   }
-  .icons{
-    margin:auto;
+
+  .icons {
+    margin: auto;
   }
-  .links-xs{
-    display:block;
-    margin-top:40px;
+
+  .links-xs {
+    display: block;
+    margin-top: 40px;
   }
-  .links-md{
-    display:none;
+
+  .links-md {
+    display: none;
   }
-  .terms{
-    margin-top:40px;
-    text-align:center;
+
+  .terms {
+    margin-top: 40px;
+    text-align: center;
   }
 }
 
@@ -966,72 +1000,87 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding-left: 128px !important;
     padding-right: 128px !important;
   }
+
   .coin {
     margin-top: -420px !important;
   }
+
   .coin9 {
     margin-top: -420px !important;
     margin-left: 400px;
   }
+
   .coin1 {
     height: 200px;
     margin-top: 200px;
     margin-left: 140px;
   }
+
   .coin3 {
     position: absolute;
     bottom: 200px;
     right: 10%;
   }
+
   .coin4 {
     height: 200px;
     position: absolute;
     bottom: 15%;
     right: 33%;
   }
+
   .coin5 {
     position: absolute;
     right: 20%;
     top: 30%;
     height: 100px;
   }
+
   .coin6 {
     position: absolute;
     z-index: 2;
     height: 136.54px;
     top: 40%;
   }
+
   .coin7 {
     position: absolute;
     z-index: 2;
     height: 136.54px;
     top: 0%;
   }
+
   .coin8 {
     position: absolute;
     z-index: 2;
     top: 50%;
     left: 35%;
   }
+
   .bg-play2earn {
     width: 100%;
   }
+
   .row-logos {
     margin-bottom: 50px;
   }
+
   .console {
     position: absolute;
     margin-top: -30px;
     left: 100px;
   }
+
   #parallax .bg4 {
-    background-position:bottom;
+    background-position: bottom;
   }
-  .links-md{
-    display:block;
+
+  .links-md {
+    display: block;
   }
-  .links-xs{
-    display:none;
+
+  .links-xs {
+    display: none;
   }
 }
 
@@ -1039,29 +1088,35 @@ Ensure the default browser behavior of the `hidden` attribute.
   .shadow-p2e {
     top: -490px;
   }
+
   .console {
     position: absolute;
     margin-top: -30px;
     left: 100px;
   }
 }
+
 @media (min-width: 1700px) {
+
   .bg-contact-team,
   .bg-integrates {
     background-size: 30%, auto, cover !important;
     padding: 60px !important;
   }
 }
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
     transform: translate3d(0, 20%, 0);
   }
+
   100% {
     opacity: 1;
     transform: translate3d(0, 0, 0);
   }
 }
+
 .main-title {
   color: white;
   font-style: normal;
@@ -1073,28 +1128,27 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 50px;
   animation: fadeIn 1s ease-in both;
 }
+
 .second-title {
   animation: fadeIn 1s ease-in both;
 }
+
 .img-play-2earn {
   margin-right: 0px;
 }
+
 body {
   font-family: "Gotham";
   background-color: #180042;
-  background-image: radial-gradient(
-    circle at 30% 50%,
-    #180042,
-    #0a0611 178%
-  ) !important;
+  background-image: radial-gradient(circle at 30% 50%,
+      #180042,
+      #0a0611 178%) !important;
 }
 
 .block-card {
-  background: linear-gradient(
-    225deg,
-    rgba(169, 239, 255, 0.1) 0%,
-    rgba(124, 0, 250, 0.1) 100%
-  );
+  background: linear-gradient(225deg,
+      rgba(169, 239, 255, 0.1) 0%,
+      rgba(124, 0, 250, 0.1) 100%);
   mix-blend-mode: normal;
   -webkit-backdrop-filter: blur(135.914px);
   backdrop-filter: blur(135.914px);
@@ -1413,12 +1467,14 @@ body {
   position: relative;
 
 }
+
 #parallax-wrap {
   height: 100%;
   width: 100%;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
+
 .parallax-layer {
   position: absolute;
 }
@@ -1435,11 +1491,11 @@ body {
   transition: all 0.2s;
 }
 
-.player{
-  background:url("../src/images/bg-shadow-player-2.png");
-  background-position:right;
-  background-repeat:no-repeat;
-  background-size:50%;
+.player {
+  background: url("../src/images/bg-shadow-player-2.png");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 50%;
 }
 
 /* terms and condition page */
@@ -1460,19 +1516,25 @@ body {
   .section-container {
     margin: 0 50px !important;
   }
+
   .user-agree {
     font-size: 25px !important;
   }
+
   .terms-condition {
     font-size: 25px !important;
   }
 }
 
 @media only screen and (max-width:640px) {
-  .footer-links-container {flex-direction: column;}
+  .footer-links-container {
+    flex-direction: column;
+  }
+
   .footer-container {
     align-items: flex-start !important;
   }
+
   .footer-link {
     margin-right: 0 !important;
     margin-top: 10px;
@@ -1487,9 +1549,17 @@ body {
   align-items: center;
 }
 
-.footer-links-container {display: flex;}
-.footer-icons-container {display: flex;}
-.footer-link {margin-right: 30px;}
+.footer-links-container {
+  display: flex;
+}
+
+.footer-icons-container {
+  display: flex;
+}
+
+.footer-link {
+  margin-right: 30px;
+}
 
 .user-agreement-container {
   display: flex;
@@ -1507,10 +1577,11 @@ body {
   margin-top: 150px;
 }
 
-.user-agree , .terms-condition {
+.user-agree,
+.terms-condition {
   font-family: Gotham;
-font-weight: 500;
-color: rgba(255, 255, 255, 1);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
 }
 
 .user-agreement-container .user-agree {
@@ -1525,20 +1596,20 @@ color: rgba(255, 255, 255, 1);
 .privacy-policy {
   font-family: Gotham;
   font-size: 30px;
-  font-weight: 400;  
+  font-weight: 400;
   color: rgba(255, 255, 255, 1);
 }
 
-.terms-conditions-section { 
-  margin-top: 73px  
-} 
+.terms-conditions-section {
+  margin-top: 73px
+}
 
 .section-container {
   margin: 0 300px;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  text-align: left; 
+  text-align: left;
 }
 
 .terms-conditions-section .section-container :nth-child(1) {
@@ -1546,7 +1617,7 @@ color: rgba(255, 255, 255, 1);
   color: rgba(255, 255, 255, 1);
 }
 
-.terms-conditions-section .section-container .section-headings { 
+.terms-conditions-section .section-container .section-headings {
   font-weight: 400;
   color: rgba(255, 255, 255, 1);
   margin: 30px 0 20px 0;
@@ -1569,18 +1640,18 @@ color: rgba(255, 255, 255, 1);
 }
 
 .terms-conditions-section .section-container .heading-paragraphs ul li span a {
-  color: rgba(190,126,255);
+  color: rgba(190, 126, 255);
   text-decoration: underline;
 }
 
-.opacity-40{
-  opacity:0.4;
+.opacity-40 {
+  opacity: 0.4;
 }
 
-.pr-4{
-  padding-right:40px;
+.pr-4 {
+  padding-right: 40px;
 }
 
-.pr-7{
-  padding-right:70px;
+.pr-7 {
+  padding-right: 70px;
 }
