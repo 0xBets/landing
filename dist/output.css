@@ -917,11 +917,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   .title {
     position: absolute;
     z-index: 10;
-    margin-top: 650px;
   }
 
   #first-block {
-    margin-top: 720px;
+    margin-top: 120px;
   }
 
   .bg-integrates,
