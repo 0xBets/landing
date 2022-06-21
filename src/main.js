@@ -37,16 +37,30 @@ $(document).on("ready", function () {
 });
 let scrollCount = 0;
 
-window.addEventListener("mousewheel", outerScrollFunc, { passive: false });
+window.addEventListener("scroll", outerScrollFunc, { passive: false });
 
 function outerScrollFunc(e) {
 
   const isAtTop = window.scrollY <= 0;
   const isAtBottom = ((window.innerHeight + window.scrollY) >= document.body.offsetHeight);
 
+  const isMobile = window.matchMedia("only screen and (max-width: 720px)").matches;
+
+  if (isMobile) {
+    // alert("isMobile!!!") 
+    $("#first-block").addClass("active");
+    $("#second-block").addClass("active");
+    $("#third-block").addClass("active");
+    
+    $(".howitworksImg").addClass("show");
+    $(".consoleImg").addClass("show");
+    $(".trophy").addClass("show");
+    return;
+  }
+
   // Using scroll-snap-type: y mandatory is needed for the parallax effect to work, but it causes an overflow issue on MAC devices.
   // The code below removes the scroll-snap-type property if the user scrolls up when at top, or scrolls down when at the bottom of the screen. This resolves the issue
-  
+
   if ((isAtTop && e.deltaY <= 0) || isAtBottom && e.deltaY > 0) {
     document.scrollingElement.style.setProperty('scroll-snap-type', 'none');
 
