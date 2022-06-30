@@ -609,6 +609,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mt-28 {
   margin-top: 7rem;
 }
+.mt-24 {
+  margin-top: 6rem;
+}
 
 .mb-24 {
   margin-bottom: 6rem;
@@ -714,8 +717,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 66.666667%;
 }
 
+
+
 .w-40 {
   width: 10rem;
+}
+
+.w-41 {
+  width: 11.875rem;
 }
 
 .grid-cols-1 {
@@ -820,6 +829,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
 }
 
 .text-2xl {
@@ -1009,6 +1023,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-left: 400px;
   }
 
+  .hero-join-us {
+    margin-top: 32px;
+  }
+ 
   .coin1 {
     height: 200px;
     margin-top: 200px;
@@ -1160,6 +1178,17 @@ body {
   background: linear-gradient(231.89deg, #12c2ea -59.57%, #7c00fa 106.57%);
 }
 
+.join-community-header {
+  width: 40%;
+  text-align: center;
+  margin: auto;
+}
+
+.join-community-image {
+  height: 875px;
+  margin: auto
+}
+
 .bg-contact-team {
   background: #5487f4;
   background-image: url("../src/images/bg-img-join-us.png"),
@@ -1256,6 +1285,9 @@ body {
 
   .md\:mb-8 {
     margin-bottom: 2rem;
+  }
+  .md\:mt-8 {
+    margin-top: 2rem;
   }
 
   .md\:block {
@@ -1497,6 +1529,15 @@ body {
   background-size: 50%;
 }
 
+.community-section-join-us {
+  height: 50px;
+  width: 190px;
+  margin-bottom: 76px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 /* terms and condition page */
 
 @media only screen and (max-width:1440px) {
@@ -1512,6 +1553,18 @@ body {
 }
 
 @media only screen and (max-width:768px) {
+  .join-us-main {
+    margin-top: 2rem;
+  }
+
+  .join-community-header {
+    width: 100%;
+  }
+
+  .join-community-image {
+    height: unset;
+  }
+
   .section-container {
     margin: 0 50px !important;
   }
@@ -1653,4 +1706,8 @@ body {
 
 .pr-7 {
   padding-right: 70px;
+}
+
+.border-white {
+  border: 1px solid white;
 }
