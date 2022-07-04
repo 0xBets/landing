@@ -983,12 +983,12 @@ Ensure the default browser behavior of the `hidden` attribute.
     text-align: center;
   }
 
-.links-xs p {
-  color: gold;
-  width: 100%;
-  margin: auto;
-  background-color: red;
-}
+  .links-xs p {
+    color: gold;
+    width: 100%;
+    margin: auto;
+    background-color: red;
+  }
 
   .links-md {
     display: none;
@@ -1763,13 +1763,16 @@ body {
   font-size: 16px;
   line-height: 32px;
 }
-.our-logo-img img{
-  margin:84px 0;
+
+.our-logo-img img {
+  margin: 84px 0;
 }
-.product-screenshot-img img{
-  margin:84px 0;
-  
+
+.product-screenshot-img img {
+  margin: 84px 0;
+
 }
+
 .our-colors,
 .our-logo,
 .product-screenshot {
@@ -1991,11 +1994,13 @@ body {
   .product-screenshot-img {
     margin-bottom: 96px;
   }
-  .our-logo-img img{
+
+  .our-logo-img img {
     margin: 0px;
 
   }
-  .product-screenshot-img img{
+
+  .product-screenshot-img img {
     margin: 0px;
   }
 
@@ -2052,5 +2057,9 @@ body {
 
   .media-hero-subheader {
     margin-top: 24px;
+  }
+
+  html {
+    scroll-snap-type: unset;
   }
 }
