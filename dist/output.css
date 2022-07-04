@@ -976,9 +976,19 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 
   .links-xs {
-    display: block;
     margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    text-align: center;
   }
+
+.links-xs p {
+  color: gold;
+  width: 100%;
+  margin: auto;
+  background-color: red;
+}
 
   .links-md {
     display: none;
@@ -1103,6 +1113,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 
   .links-xs {
+    display: none;
+  }
+
+  .mobile-only {
     display: none;
   }
 
