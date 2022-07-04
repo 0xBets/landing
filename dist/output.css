@@ -1711,3 +1711,7 @@ body {
 .border-white {
   border: 1px solid white;
 }
+
+html {
+  scroll-snap-type: unset;
+}
