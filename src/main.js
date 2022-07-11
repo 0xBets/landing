@@ -1,3 +1,26 @@
+// Accept Cookies
+const acceptCookies = () => {
+  document.cookie = "user_accepted = true; expires=Tue, 19 Jan 2038 04:14:07 GMT";
+  document.querySelector(".cookie-banner").style.display="none";
+}
+
+// Get a cookie
+function getCookie(cName) {
+  const name = cName + "=";
+  const cDecoded = decodeURIComponent(document.cookie); //to be careful
+  const cArr = cDecoded.split('; ');
+  let res;
+  cArr.forEach(val => {
+    if (val.indexOf(name) === 0) res = val.substring(name.length);
+  })
+  return res;
+}
+
+// Hide cookie banner
+function hideBanner() {
+  document.querySelector(".cookie-banner").style.display="none";
+}
+
 $(document).on("ready", function () {
   parallax.init();
   $(".second-title").hide();
@@ -34,6 +57,17 @@ $(document).on("ready", function () {
       },
     ],
   });
+
+  const cookie_banner =  document.querySelector(".cookie-banner");
+
+  let userAccepted = getCookie("user_accepted");
+  if(userAccepted) {
+    cookie_banner.style.display = "none";
+  }else {
+    cookie_banner.style.display="flex"
+  }
+  
+
 });
 let scrollCount = 0;
 
@@ -51,7 +85,6 @@ function outerScrollFunc(e) {
     $("#first-block").addClass("active");
     $("#second-block").addClass("active");
     $("#third-block").addClass("active");
-    
     $(".howitworksImg").addClass("show");
     $(".consoleImg").addClass("show");
     $(".trophy").addClass("show");
@@ -227,6 +260,7 @@ function scrollFunc(e) {
     trophyImg.classList.remove("show")
   }
 }
+
 
 function throttle(callback, limit) {
   var wait = false;
