@@ -73,141 +73,141 @@ let scrollCount = 0;
 
 window.addEventListener("scroll", outerScrollFunc, { passive: false });
 
-function outerScrollFunc(e) {
+// function outerScrollFunc(e) {
 
-  const isAtTop = window.scrollY <= 0;
-  const isAtBottom = ((window.innerHeight + window.scrollY) >= document.body.offsetHeight);
+//   const isAtTop = window.scrollY <= 0;
+//   const isAtBottom = ((window.innerHeight + window.scrollY) >= document.body.offsetHeight);
 
-  const isMobile = window.matchMedia("only screen and (max-width: 720px)").matches;
+//   const isMobile = window.matchMedia("only screen and (max-width: 720px)").matches;
 
-  if (isMobile) {
-    // alert("isMobile!!!") 
-    $("#first-block").addClass("active");
-    $("#second-block").addClass("active");
-    $("#third-block").addClass("active");
-    $(".howitworksImg").addClass("show");
-    $(".consoleImg").addClass("show");
-    $(".trophy").addClass("show");
-    return;
-  }
+//   if (isMobile) {
+//     // alert("isMobile!!!") 
+//     $("#first-block").addClass("active");
+//     $("#second-block").addClass("active");
+//     $("#third-block").addClass("active");
+//     $(".howitworksImg").addClass("show");
+//     $(".consoleImg").addClass("show");
+//     $(".trophy").addClass("show");
+//     return;
+//   }
 
-  // Using scroll-snap-type: y mandatory is needed for the parallax effect to work, but it causes an overflow issue on MAC devices.
-  // The code below removes the scroll-snap-type property if the user scrolls up when at top, or scrolls down when at the bottom of the screen. This resolves the issue
+//   // Using scroll-snap-type: y mandatory is needed for the parallax effect to work, but it causes an overflow issue on MAC devices.
+//   // The code below removes the scroll-snap-type property if the user scrolls up when at top, or scrolls down when at the bottom of the screen. This resolves the issue
 
-  if ((isAtTop && e.deltaY <= 0) || isAtBottom && e.deltaY > 0) {
-    document.scrollingElement.style.setProperty('scroll-snap-type', 'none');
+//   if ((isAtTop && e.deltaY <= 0) || isAtBottom && e.deltaY > 0) {
+//     document.scrollingElement.style.setProperty('scroll-snap-type', 'none');
 
-  } else {
-    document.scrollingElement.style.setProperty('scroll-snap-type', 'y mandatory');
+//   } else {
+//     document.scrollingElement.style.setProperty('scroll-snap-type', 'y mandatory');
 
-  }
+//   }
 
-  var target = document.querySelector("#second-block");
-  var bounding = target.getBoundingClientRect();
+//   var target = document.querySelector("#second-block");
+//   var bounding = target.getBoundingClientRect();
 
-  if (
-    bounding.top >= 0 &&
-    bounding.left >= 0 &&
-    bounding.right <=
-    (window.innerWidth || document.documentElement.clientWidth) &&
-    bounding.bottom <=
-    (window.innerHeight || document.documentElement.clientHeight)
-  ) {
-    if (
-      (e.deltaY > 0 &&
-        (!$("#first-block").hasClass("active") ||
-          !$("#second-block").hasClass("active") ||
-          !$("#third-block").hasClass("active"))) ||
-      (e.deltaY < 0 &&
-        ($("#first-block").hasClass("active") ||
-          $("#second-block").hasClass("active") ||
-          $("#third-block").hasClass("active")))
-    )
-      e.preventDefault();
-    document.addEventListener("mousewheel", scrollFunc, { passive: false });
-  } else {
-    document.removeEventListener("mousewheel", scrollFunc);
-  }
+//   if (
+//     bounding.top >= 0 &&
+//     bounding.left >= 0 &&
+//     bounding.right <=
+//     (window.innerWidth || document.documentElement.clientWidth) &&
+//     bounding.bottom <=
+//     (window.innerHeight || document.documentElement.clientHeight)
+//   ) {
+//     if (
+//       (e.deltaY > 0 &&
+//         (!$("#first-block").hasClass("active") ||
+//           !$("#second-block").hasClass("active") ||
+//           !$("#third-block").hasClass("active"))) ||
+//       (e.deltaY < 0 &&
+//         ($("#first-block").hasClass("active") ||
+//           $("#second-block").hasClass("active") ||
+//           $("#third-block").hasClass("active")))
+//     )
+//       e.preventDefault();
+//     document.addEventListener("mousewheel", scrollFunc, { passive: false });
+//   } else {
+//     document.removeEventListener("mousewheel", scrollFunc);
+//   }
 
-  if ($(".play-2-earn").offset().top < top + 100) {
-    $(".second-title").show();
-  }
-  $(".second-title");
-}
-var parallax = {
-  options: {
-    multiplier: 0.002,
-    wrapper: "#parallax-wrap",
-    wrapperOffset: $("#parallax").offset(),
-    wrapperWidth: $("#parallax").width(),
-    wrapperHeight: $("#parallax").height(),
-    wrapperCenter: {
-      x: function () {
-        return (
-          parallax.options.wrapperOffset.left +
-          parallax.options.wrapperWidth / 2
-        );
-      },
-      y: function () {
-        return (
-          parallax.options.wrapperOffset.top +
-          parallax.options.wrapperHeight / 2
-        );
-      },
-    },
-    relativeMouse: {
-      x: function (x) {
-        return (
-          (x - parallax.options.wrapperCenter.x()) * parallax.options.multiplier
-        );
-      },
-      y: function () {
-        return (
-          (parallax.mouseY - parallax.options.wrapperCenter.y()) *
-          parallax.options.multiplier
-        );
-      },
-    },
-    origin: {
-      x: function () {
-        return (parallax.mouseX / $(window).width()) * 100;
-      },
-      y: function () {
-        return (parallax.mouseY / $(window).height()) * 100;
-      },
-    },
-  },
-  mouseX: 0,
-  mouseY: 0,
-  mouse: function (x, y) {
-    var that = this;
-    this.mouseX = x;
-    this.mouseY = y;
-    $(parallax.options.wrapper).css({
-      "-webkit-transform":
-        "perspective(1000px) rotateY(" +
-        that.options.relativeMouse.x(that.mouseX) +
-        "deg) rotateX(" +
-        that.options.relativeMouse.y(that.mouseY) +
-        "deg)",
-      transform:
-        "perspective(1000px) rotateY(" +
-        that.options.relativeMouse.x(that.mouseX) +
-        "deg) rotateX(" +
-        that.options.relativeMouse.y(that.mouseY) +
-        "deg)",
-    });
-  },
-  mousemoveEvent: function () {
-    var that = this;
-    $("body").mousemove(function (e) {
-      that.mouse(e.pageX, e.pageY);
-    });
-  },
-  init: function () {
-    this.mousemoveEvent();
-  },
-};
+//   if ($(".play-2-earn").offset().top < top + 100) {
+//     $(".second-title").show();
+//   }
+//   $(".second-title");
+// }
+// var parallax = {
+//   options: {
+//     multiplier: 0.002,
+//     wrapper: "#parallax-wrap",
+//     wrapperOffset: $("#parallax").offset(),
+//     wrapperWidth: $("#parallax").width(),
+//     wrapperHeight: $("#parallax").height(),
+//     wrapperCenter: {
+//       x: function () {
+//         return (
+//           parallax.options.wrapperOffset.left +
+//           parallax.options.wrapperWidth / 2
+//         );
+//       },
+//       y: function () {
+//         return (
+//           parallax.options.wrapperOffset.top +
+//           parallax.options.wrapperHeight / 2
+//         );
+//       },
+//     },
+//     relativeMouse: {
+//       x: function (x) {
+//         return (
+//           (x - parallax.options.wrapperCenter.x()) * parallax.options.multiplier
+//         );
+//       },
+//       y: function () {
+//         return (
+//           (parallax.mouseY - parallax.options.wrapperCenter.y()) *
+//           parallax.options.multiplier
+//         );
+//       },
+//     },
+//     origin: {
+//       x: function () {
+//         return (parallax.mouseX / $(window).width()) * 100;
+//       },
+//       y: function () {
+//         return (parallax.mouseY / $(window).height()) * 100;
+//       },
+//     },
+//   },
+//   mouseX: 0,
+//   mouseY: 0,
+//   mouse: function (x, y) {
+//     var that = this;
+//     this.mouseX = x;
+//     this.mouseY = y;
+//     $(parallax.options.wrapper).css({
+//       "-webkit-transform":
+//         "perspective(1000px) rotateY(" +
+//         that.options.relativeMouse.x(that.mouseX) +
+//         "deg) rotateX(" +
+//         that.options.relativeMouse.y(that.mouseY) +
+//         "deg)",
+//       transform:
+//         "perspective(1000px) rotateY(" +
+//         that.options.relativeMouse.x(that.mouseX) +
+//         "deg) rotateX(" +
+//         that.options.relativeMouse.y(that.mouseY) +
+//         "deg)",
+//     });
+//   },
+//   mousemoveEvent: function () {
+//     var that = this;
+//     $("body").mousemove(function (e) {
+//       that.mouse(e.pageX, e.pageY);
+//     });
+//   },
+//   init: function () {
+//     this.mousemoveEvent();
+//   },
+// };
 
 // function scrollFunc(e) {
 //   // if(e.deltaY < 0) return;
