@@ -209,58 +209,6 @@ var parallax = {
   },
 };
 
-function scrollFunc(e) {
-  // if(e.deltaY < 0) return;
-
-
-  let metamaskWalletImg = document.querySelector(".howitworksImg");
-  let consoleImg = document.querySelector(".consoleImg");
-  let trophyImg = document.querySelector(".trophy");
-
-  let isMouse = Math.abs(e.deltaY / 100) >= 1;
-  let returnNum = (num) => {
-    return isMouse ? num : num * 10;
-  };
-
-  if (
-    (e.deltaY > 0 && !$("#third-block").hasClass("active")) ||
-    (e.deltaY < 0 && $("#first-block").hasClass("active"))
-  ) {
-    e.preventDefault();
-  }
-
-  if (e.deltaY < 0) {
-    scrollCount--;
-  } else if (e.deltaY > 0) {
-    scrollCount++;
-  }
-  if (scrollCount >= returnNum(3)) {
-    $("#first-block").addClass("active");
-    metamaskWalletImg.classList.add("show")
-  } else {
-    $("#first-block").removeClass("active");
-    metamaskWalletImg.classList.remove("show")
-
-  }
-  if (scrollCount >= returnNum(6)) {
-    $("#second-block").addClass("active");
-    consoleImg.classList.add("show")
-
-  } else {
-    $("#second-block").removeClass("active");
-    consoleImg.classList.remove("show")
-
-  }
-  if (scrollCount >= returnNum(9)) {
-    $("#third-block").addClass("active");
-    trophyImg.classList.add("show")
-
-  } else {
-    $("#third-block").removeClass("active");
-    trophyImg.classList.remove("show")
-  }
-}
-
 
 function throttle(callback, limit) {
   var wait = false;
